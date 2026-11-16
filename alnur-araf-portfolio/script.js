@@ -1,0 +1,63 @@
+const artworks = [{"id": "01", "title": "Autumn Woodland Fox", "category": "Cute Clipart", "description": "A charming woodland fox in a warm autumn palette, created as a character illustration.", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhjYkqzXPExD6PecQ98LqBhib-YL93Kpobj7nIux-Tjxzi_PQp1GX1qakvt0vUMjhhskGhCXg41xZ_TgPVzxv5LkYuUruVdH4Pcy0TAMrScntyAWPsKy8fBdKUYHpvS60n3vhlkt1CAlY6HxZYyikFgdF2sHVhI3R0otMGe5VJfdVwdNDiI847sdJ3LZFIf/s1600/01._AUTUMN_WOODLAND_FOX_d7fc4b39.jpg"}, {"id": "02", "title": "Magical Mushroom Cottage", "category": "Cute Clipart", "description": "A whimsical miniature cottage inspired by enchanted woodland settings.", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjWUnDblUF6UPYFZEzqmHSusCdJWuCpKXuvijtmCH5SUbin6rVZ5WYUyt-Yp_YExt9Su4xCeNuXvax0NyE-dPVmEN8BqctNrNmnChJ1-24iq_plEzsrEAjpjyRw3PpfCjUFeQBee3G9dgU8LlH9_HNxCfiGea-CtbP5i1jdWhgaZ31UUhkh3YfQLJ_jOrxv/s1600/02._MAGICAL_MUSHROOM_COTTAGE_57c3f79b.jpg"}, {"id": "03", "title": "Strawberry Capybara", "category": "Cute Clipart", "description": "A playful kawaii-inspired capybara character with a strawberry theme.", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiAC7_JyRcNBuBzVdMen8EV_JgFUMmVkx6eqNufrbrSZm1FAN-B7V_-Qla6bJJgqBjIgXN5ehYfsOfU1grRy9TRug1HLcBiXNDD1CXAtZALVpMjGGMLXMZ2m79g3B9wOcVVkBlwcz9mICQHL9MbUFgruKyMCWZAO_8b3yt16rehXVSB8rJJSt1h-zrHnOY/s1600/03._STRAWBERRY_CAPYBARA_92357dde.jpg"}, {"id": "04", "title": "Enchanted Garden Butterfly", "category": "Cute Clipart", "description": "A decorative butterfly illustration with botanical-inspired details.", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiWqPVHa6qIn7FeYRUvTnBTHswS65JmKgbfyjr4ZjGKzRLN3Fnq02Jv_8s372W9Nf8m3rVGLKCKWC4Ps4438WPjgvAol9QqsnYCGWU_rLBRfvimDCy91lKOtE3ojmteYHlkeb-qvfxjkZK4yAUL8viz0pJOMs0S5TNzRWtuRrCTeXdiqBW4F5bHVeEkFjDj/s1600/04._ENCHANTED_GARDEN_BUTTERFLY_1ace7c7f.jpg"}, {"id": "05", "title": "Botanical Elements Icon Set", "category": "Vector & SVG", "description": "A coordinated botanical icon collection featuring leaves and plant forms.", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg7xhQ36ybYI202AK49B2Ga7CuW-AHqy264a1pXRHhW6U4EVYEllX2JvjtuH0wNPuPCb0NBNslDQbucVJjLll2GtBCleTbKBUJ7cJt-gai33g1pQR6FuVI_6kAVl2IM2pYgdsqRO-8dlVGi2W2z3dUFURVgarvNULbSRpwwzn5tP9Fu7YZ_NlcQwDYuzTc4/s1600/05._BOTANICAL_ELEMENTS_ICON_SET_da0036c4.jpg"}, {"id": "06", "title": "Coffee Shop Essentials", "category": "Vector & SVG", "description": "A themed set of coffee shop objects and café-related illustrations.", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjbKijUGjrEqf6upG5JSVcXhvmmjP7rF1iGBga5bwzHXteypMKOXMhqCaKs4VofJcClUxnOudWPuUEwcMv6fSwuFHUnmYDZiEoXCCE9CLNGnQfDrBtTp31wa9WU9WrrQYrdFhfsbGb0oePH6os8BtNlnVxhtlkLUh2Txk-GHDNw-Fdj5C0JXistmg8zu98_/s1600/06._COFFEE_SHOP_ESSENTIALS_b361b84b.jpg"}, {"id": "07", "title": "Abstract Geometric Shapes", "category": "Vector & SVG", "description": "A modern abstract collection of geometric forms and color blocks.", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgwnTDqcP5_1MJANtsJgnb5o4C8euMACdWo7_iWBp7Rc4TtBKhCu3k5iGPMjpwmyk-sD6hOAqq8WAIbpahcZpLqbP-T6KMXLOTqVb6gd1Jt3qJeJVXIOWa1ktFDGSlgfzbMaS35OzObDMv2royChDDiTwqP5xvH9YiCZR2Kn8jcFCI_xP1fwZ8Z-4DaVAee/s1600/07._ABSTRACT_GEOMETRIC_SHAPES_53de840f.jpg"}, {"id": "08", "title": "Gardening Tools Icon Set", "category": "Vector & SVG", "description": "A practical themed icon collection for gardening and plant care.", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjRHYP6M5d9nlHqN6juJsz0jnBJceR_OLDZlQ3EkukJFHOFm-iRiGwEhvtrw_YRQaajg8rap-joukDSm8p67MctvYbo-eKDxl8lgkCp77gj9HNifT6istdTrH2mWu63XPH_uoc6tY90O6DYB0ue6Hw0m9ujfMNGUfvx2_F-VaWJkY9BNxKZ-sl6GzLlydTo/s1600/08._GARDENING_TOOLS_ICON_SET_5b9a93ae.jpg"}, {"id": "09", "title": "Swan Lake Botanical Dreams", "category": "Watercolor Art", "description": "A graceful swan-themed watercolor artwork with botanical inspiration.", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLAOGIDq10asnxQcKcfAOKEMrFIb9amz9ppLoQ6Hdk8YPqA8V5Ee0mrv3LuiAFvPSZaG1EqjHmOY5aeeOESF4uNWWPTJJaSHi6omQ0qh_Bh2li_CUHhiX5CLhNCGCMdxriH2ZlCh8ZuRVxXJNr4Vyf2ZQqmzAfsINK3BbGHPfwTAnm6gkfjYN007GTLT6/s1600/09._SWAN_LAKE_BOTANICAL_DREAMS_cb92ff07.jpg"}, {"id": "10", "title": "Secret Cottage Garden", "category": "Watercolor Art", "description": "A peaceful cottage garden scene with a soft watercolor treatment.", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEinF4jPuyE5tJvy18KRicoZHUg0DhWbKvse7yeTw2Cl_WQq84SfBRZfzFXCu7krg2X6lrOh4jI2BUioNbfbgl824woysQTVH-NO8WGaVDYHKkNlxm5ujjarGJSAAhGsnTYYeLD6fbCaKoUL8hhf-rkZ7XxZXXTtOpuevHqi6q9q2W4IPk_RH9KW-TiDh4lB/s1600/10._SECRET_COTTAGE_GARDEN_8bc04c7b.jpg"}, {"id": "11", "title": "Tropical Birds Paradise", "category": "Watercolor Art", "description": "A colorful tropical bird and foliage composition.", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhpX8ATDl0rbtZkC7awT1vBnBM4nKWwWM7tiT2PWqX5H6nxsPXS2w_YxeaFC6K2uClHqSGRfz0YZLvcTredQhHQBoHymI7gBdOA7YeoWa4E0ZxRd0b73c067TtuATdlZ9Mc53UKTxkOs_X2jxVQUZhEO7Wfsxr4O5A4wkcV0RSXRedwSZSjN7mrAF0donIs/s1600/11._TROPICAL_BIRDS_PARADISE_af15fb5e.jpg"}, {"id": "12", "title": "Celestial Botanical Dreams", "category": "Watercolor Art", "description": "A dreamy celestial and botanical illustration in watercolor style.", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNRSkI84lf2gXJQoHdotYToBAdNOp1AniHJTUErGgrffrxT2nE55zHiTqC1RWBtIimwVcOsSiJ5hYw9QoufU94JXwh2UVk4ICIvo4-TjimcpXCx4lh1pLVatWkwy_1_hGMH5zcYDNn25O1VpHty6xvcjYKpGaJuFo_DeUgUR8ftein7g5uRWvAFQlDIz8K/s1600/12._CELESTIAL_BOTANICAL_DREAMS_eb4afb6f.jpg"}, {"id": "13", "title": "Cozy Greenhouse Retreat", "category": "Coloring Pages", "description": "A detailed greenhouse scene prepared as a black-and-white coloring design.", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFreUvx6OUb1IBprX3PBYBCY-ZiKF5V2d-TpQeNb_u8uGC9Vp3LwHVyl4QI3UJu6Lq3boRDBoWMn4Q_JJ0iyGu8eCwPGn9t0Pzl7D7jaYT095iFYh2UE1S7RU0lajdwDuafMfghDTb39rGjgG4PE5X9viW7tF_ZknXh0MG36XzPMOVJUdJvpmSQiO72JrK/s1600/13._COZY_GREENHOUSE_RETREAT_8c865fca.jpg"}, {"id": "14", "title": "Fantasy Dragon Garden", "category": "Coloring Pages", "description": "A fantasy garden illustration featuring a friendly dragon.", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhClPxIT8Dq1BghoGjOP9Ot51xUITF9vZ61u1skZViz83JjPRfkrLM-bSPMxtbe6lvAQQw4nKRHunR51rBTP0I4h9cOFTXTC58q9OeuchI2fSRDiLpwGeDUVmobwZ26IcyWK-YzLHePcpP-EBJ7l965T2isKHGqTWqjz1_2ujPuzvNxy55XLGTJ017hFkBF/s1600/14._FANTASY_DRAGON_GARDEN_1157fb6e.jpg"}, {"id": "15", "title": "Cozy Bookshop Corner", "category": "Coloring Pages", "description": "A cozy bookstore interior illustration for coloring.", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgCWTFRbccNCw2VhB2dXRNae0ZrLQiyRCl2LDLKMCJfd2Bk805ix8p_LxMHI0xWrZ-_I_e-5R0rLJogmz2VWLk_jBc-mZ9N3EOzEagBgyCsFEaFJEBuxLk4zkGrXhScvB_pdYekZRkexBg47IX8MflNDut54EkBJPYi5bf2tKRoLDEmqNERvdrK1lRK-N7/s1600/15._COZY_BOOKSHOP_CORNER_7fee309c.jpg"}, {"id": "16", "title": "Underwater Fantasy World", "category": "Coloring Pages", "description": "An underwater scene with sea life and coral reef details.", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhOEWeCl0cuNKcAHJMgcJ086rzPBArg_7jbCKXW_d7dVWrHCGGyAR3YhtTBY1IHCADfG-hRA3fsNJMG3rwfJSNtPKHreYOVb_Yw93r173ZFi6xI7OWLIUwjbzYGW0X_CZDFd3jnfkl7NBs20I7RSIX9Cenbg1i0gpxqlemx0MvwfySCjcVFdVarrdl4WaSN/s1600/16._UNDERWATER_FANTASY_WORLD_66dc5ca3.jpg"}, {"id": "17", "title": "Vintage Wildflower Pattern", "category": "Patterns & Printables", "description": "A vintage-inspired floral surface pattern in a soft botanical palette.", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgN28PoDP6rreS9DghQziNoNHAljcvojlL0LTpvV4brPhsqM_BnFf01lql6sWj59N_0UTNWQsOFUMAK1utyJe9Tid0Un4fuo_bo2mtcWQ1zKwdLqVaop5H_-bbi6HxyYwR4tTmm2KYBPq-3YPzPaqA7EIGSL4obmtrJRFX_n6U3kZWwN-7UXLEBh6jtuWOM/s1600/17._VINTAGE_WILDFLOWER_PATTERN_4281680f.jpg"}, {"id": "18", "title": "Kawaii Autumn Pattern", "category": "Patterns & Printables", "description": "A cheerful autumn-themed repeating pattern with cute motifs.", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi97opjCqYrUB3OVv5TghMOLAzwoPEfcUVYppxQigOq1zqUpkQ6y6i1GTAgJNKTVwYii67bCXUxP2JH9XMkF2VMaDca_EAgA3_c3UUjNbZd0OwJWartcHqPv0CSKz5WtB2nFi8y-QIDckqFSBtpnvCDPudqCO9RKTEp02Q6J7-EbcP7EqJaaAWuNoV3QbP5/s1600/18._KAWAII_AUTUMN_PATTERN_7a54dfdc.jpg"}, {"id": "19", "title": "Modern Terracotta Geometry", "category": "Patterns & Printables", "description": "A contemporary geometric pattern in warm terracotta and neutral tones.", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhD0RnIOnv6lBqmbJqXMuBKnO_sCYTwC-wzawxQfBgZtO8SbTAtexUIACj-nPnJvR8QHkpGi3xzcBiHS0E-z-MJJFwEEse9BrjAOaq-n93y2WhmWCnxq6McmQrt5XzLdylQ8d0rgDrwmVPHIhAkmMPZX15Kr31GglaaCW7ItZUp2fYYP3MeyXQPLXPhP274/s1600/19._MODERN_TERRACOTTA_GEOMETRY_11a05d40.jpg"}, {"id": "20", "title": "Botanical Weekly Planner", "category": "Patterns & Printables", "description": "A botanical-themed weekly planner with functional planning sections.", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWbel3SwPe9Vn5g-szFnq_URhxP9XCOgWDmRFd6v9uT3kJsSejflukiwY5dB-J5n5u04FCo-Dp6EsPABVcJgEy4AeW9FHSnNRw-WptnUWtWE1jKpKJmSoDOqni1S-kNfJjAONAvtvWrh_3Ce21wv_-uhxquGWXKHhIBCXSgsvQyTM6U7Qshwjpab_Xgv5y/s1600/20._BOTANICAL_WEEKLY_PLANNER_c960063a.jpg"}];
+const gallery = document.getElementById('gallery');
+const filters = document.getElementById('filters');
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.getElementById('lightboxImage');
+let visibleArtworks = artworks;
+let currentIndex = 0;
+
+function renderGallery(filter = 'All') {
+  visibleArtworks = filter === 'All' ? artworks : artworks.filter(item => item.category === filter);
+  gallery.innerHTML = visibleArtworks.map(item => `
+    <article class="art-card" tabindex="0" role="button" aria-label="View ${item.title}" data-id="${item.id}">
+      <div class="art-image"><img src="${item.image}" alt="${item.title}" loading="lazy" onerror="this.style.opacity='.15';this.alt='Image could not be loaded';"></div>
+      <div class="art-info"><span class="art-category">${item.category}</span><h3>${item.title}</h3><p>${item.description}</p></div>
+    </article>`).join('');
+  gallery.querySelectorAll('.art-card').forEach(card => {
+    const open = () => openLightbox(visibleArtworks.findIndex(item => item.id === card.dataset.id));
+    card.addEventListener('click', open);
+    card.addEventListener('keydown', event => { if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); open(); } });
+  });
+}
+function openLightbox(index) {
+  if(index < 0) return;
+  currentIndex = index;
+  const item = visibleArtworks[currentIndex];
+  lightboxImage.src = item.image;
+  lightboxImage.alt = item.title;
+  document.getElementById('lightboxCategory').textContent = item.category;
+  document.getElementById('lightboxTitle').textContent = item.title;
+  document.getElementById('lightboxDescription').textContent = item.description;
+  lightbox.classList.add('open');
+  lightbox.setAttribute('aria-hidden','false');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('lightboxClose').focus();
+}
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  lightbox.setAttribute('aria-hidden','true');
+  document.body.style.overflow = '';
+}
+function moveLightbox(direction) {
+  currentIndex = (currentIndex + direction + visibleArtworks.length) % visibleArtworks.length;
+  openLightbox(currentIndex);
+}
+filters.addEventListener('click', event => {
+  const button = event.target.closest('button[data-filter]');
+  if(!button) return;
+  filters.querySelectorAll('.filter').forEach(item => item.classList.remove('active'));
+  button.classList.add('active');
+  renderGallery(button.dataset.filter);
+});
+document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+document.getElementById('prevArtwork').addEventListener('click', () => moveLightbox(-1));
+document.getElementById('nextArtwork').addEventListener('click', () => moveLightbox(1));
+lightbox.addEventListener('click', event => { if(event.target === lightbox) closeLightbox(); });
+document.addEventListener('keydown', event => {
+  if(!lightbox.classList.contains('open')) return;
+  if(event.key === 'Escape') closeLightbox();
+  if(event.key === 'ArrowLeft') moveLightbox(-1);
+  if(event.key === 'ArrowRight') moveLightbox(1);
+});
+document.getElementById('year').textContent = new Date().getFullYear();
+renderGallery();
