@@ -1,514 +1,1893 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#101014">
-<title>ALNUR ARAF — Creative Portfolio</title>
-<meta name="description" content="Explore the creative portfolio of ALNUR ARAF, featuring digital illustrations, watercolor artwork, clipart, patterns, vectors and design assets.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alnur Araf | Creative Designer Portfolio</title>
+<meta name="description" content="Explore the creative portfolio of Alnur Araf featuring professional illustrations, clipart, patterns, textures, digital assets, and creative design resources.">
+<link rel="canonical" href="https://www.alnuraraf.eu.org/">
+<meta name="theme-color" content="#6C63FF">
+<meta name="author" content="Alnur Araf">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alnur Araf">
+<meta property="og:title" content="Alnur Araf | Creative Designer Portfolio">
+<meta property="og:description" content="Explore the creative portfolio of Alnur Araf featuring professional illustrations, clipart, patterns, textures, digital assets, and creative design resources.">
+<meta property="og:url" content="https://www.alnuraraf.eu.org/">
+<meta property="og:image" content="https://www.alnuraraf.eu.org/og-image.jpg">
+<meta property="og:image:alt" content="Alnur Araf — Creative Designer Portfolio">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alnur Araf | Creative Designer Portfolio">
+<meta name="twitter:description" content="Explore the creative portfolio of Alnur Araf featuring professional illustrations, clipart, patterns, textures, digital assets, and creative design resources.">
+<meta name="twitter:image" content="https://www.alnuraraf.eu.org/og-image.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236C63FF'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='28' fill='white' text-anchor='middle'%3EAA%3C/text%3E%3C/svg%3E">
 
 <style>
-:root {
-  --bg: #101014;
-  --panel: #19191f;
-  --text: #f5f3f8;
-  --muted: #a5a1ae;
-  --accent: #b99aff;
-  --line: rgba(255,255,255,.1);
+/* ============================================================
+   RESET & TOKENS
+   ============================================================ */
+*,*::before,*::after{box-sizing:border-box}
+
+:root{
+  --bg:#FAFAFA;
+  --text:#171717;
+  --muted:#777777;
+  --accent:#6C63FF;
+  --accent-soft:rgba(108,99,255,.10);
+  --border:#EAEAEA;
+  --card:#FFFFFF;
+  --radius:16px;
+  --radius-sm:12px;
+  --shadow-sm:0 1px 2px rgba(23,23,23,.04), 0 4px 16px rgba(23,23,23,.04);
+  --shadow-md:0 14px 36px rgba(23,23,23,.10);
+  --shadow-lg:0 28px 70px rgba(23,23,23,.16);
+  --font-sans:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display:"Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  --maxw:1300px;
+  --header-h:74px;
+  --ease:cubic-bezier(.2,.7,.3,1);
 }
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:calc(var(--header-h) + 18px);
+  -webkit-text-size-adjust:100%;
 }
-a { color: inherit; text-decoration: none; }
-button, input { font: inherit; }
-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  background: rgba(16,16,20,.9);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--line);
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font-sans);
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
-.nav {
-  max-width: 1500px;
-  margin: auto;
-  padding: 20px 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+
+img{max-width:100%}
+h1,h2,h3,h4{margin:0;font-weight:600;letter-spacing:-.02em;line-height:1.15}
+p{margin:0}
+a{color:inherit}
+button{font-family:inherit}
+::selection{background:rgba(108,99,255,.20)}
+
+.container{
+  width:100%;
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:0 clamp(16px,4vw,40px);
 }
-.logo {
-  font-size: 20px;
-  font-weight: 900;
-  letter-spacing: 3px;
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:60;
+  background:rgba(250,250,250,.82);
+  -webkit-backdrop-filter:saturate(180%) blur(14px);
+  backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid transparent;
+  transition:border-color .3s ease, box-shadow .3s ease, background .3s ease;
 }
-.logo span { color: var(--accent); }
-.nav-links { display: flex; gap: 25px; color: var(--muted); font-size: 13px; }
-.nav-links a:hover { color: white; }
-.hero {
-  max-width: 1500px;
-  margin: auto;
-  padding: 85px 5% 55px;
+.site-header.is-scrolled{
+  border-bottom-color:var(--border);
+  box-shadow:0 6px 24px rgba(23,23,23,.05);
+  background:rgba(250,250,250,.94);
 }
-.eyebrow {
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: 11px;
-  font-weight: bold;
+
+.header-inner{
+  height:var(--header-h);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1.5rem;
 }
-.hero h1 {
-  font-size: clamp(42px, 7vw, 88px);
-  line-height: .98;
-  letter-spacing: -4px;
-  margin: 20px 0;
-  max-width: 900px;
+
+.wordmark{
+  display:inline-flex;
+  align-items:center;
+  gap:.65rem;
+  text-decoration:none;
+  color:var(--text);
+  flex-shrink:0;
 }
-.hero h1 span { color: var(--accent); }
-.hero p {
-  max-width: 600px;
-  color: var(--muted);
-  line-height: 1.8;
-  font-size: 15px;
+.wordmark-mark{
+  width:34px;height:34px;
+  display:grid;place-items:center;
+  border-radius:10px;
+  background:var(--accent);
+  color:#fff;
+  font-family:var(--font-display);
+  font-size:.85rem;
+  letter-spacing:.02em;
+  box-shadow:0 6px 16px rgba(108,99,255,.32);
 }
-.hero-bottom {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px;
-  margin-top: 30px;
+.wordmark-text{
+  font-size:.9rem;
+  font-weight:700;
+  letter-spacing:.20em;
+  text-transform:uppercase;
 }
-.pill {
-  border: 1px solid var(--line);
-  border-radius: 50px;
-  padding: 10px 16px;
-  font-size: 12px;
-  color: #d8d3e0;
+
+.nav{display:flex;align-items:center;gap:.35rem}
+
+.nav-link{
+  position:relative;
+  padding:.5rem .85rem;
+  font-size:.88rem;
+  font-weight:500;
+  color:var(--muted);
+  text-decoration:none;
+  border-radius:8px;
+  transition:color .25s ease;
 }
-main {
-  max-width: 1500px;
-  margin: auto;
-  padding: 15px 5% 80px;
+.nav-link::after{
+  content:"";
+  position:absolute;
+  left:.85rem;right:.85rem;bottom:.28rem;
+  height:1.5px;
+  background:var(--accent);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .3s var(--ease);
+  border-radius:2px;
 }
-.section-heading {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 20px;
-  margin: 25px 0;
+.nav-link:hover{color:var(--text)}
+.nav-link:hover::after,
+.nav-link.is-active::after{transform:scaleX(1)}
+.nav-link.is-active{color:var(--text)}
+
+.nav-toggle{
+  display:none;
+  width:44px;height:44px;
+  padding:0;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:#fff;
+  cursor:pointer;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:5px;
+  transition:border-color .25s ease, box-shadow .25s ease;
 }
-.section-heading h2 { font-size: 26px; margin: 0; }
-.section-heading p { color: var(--muted); font-size: 12px; }
-.toolbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-bottom: 25px;
+.nav-toggle:hover{border-color:#d9d9d9;box-shadow:var(--shadow-sm)}
+.nav-toggle span{
+  display:block;
+  width:17px;height:1.6px;
+  background:var(--text);
+  border-radius:2px;
+  transition:transform .3s var(--ease), opacity .2s ease;
 }
-.filters { display: flex; flex-wrap: wrap; gap: 8px; }
-.filter {
-  background: transparent;
-  color: var(--muted);
-  border: 1px solid var(--line);
-  border-radius: 30px;
-  padding: 9px 14px;
-  cursor: pointer;
-  font-size: 12px;
+.site-header.nav-open .nav-toggle span:nth-child(1){transform:translateY(6.6px) rotate(45deg)}
+.site-header.nav-open .nav-toggle span:nth-child(2){opacity:0}
+.site-header.nav-open .nav-toggle span:nth-child(3){transform:translateY(-6.6px) rotate(-45deg)}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative;
+  overflow:hidden;
+  padding:clamp(58px,8.5vw,116px) 0 clamp(46px,6.5vw,92px);
+  text-align:center;
 }
-.filter.active, .filter:hover {
-  color: #111;
-  background: var(--accent);
-  border-color: var(--accent);
+.hero::before{
+  content:"";
+  position:absolute;
+  top:-46%;
+  left:50%;
+  transform:translateX(-50%);
+  width:min(1000px,150vw);
+  height:min(1000px,150vw);
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(108,99,255,.14) 0%, rgba(108,99,255,.05) 42%, rgba(108,99,255,0) 66%);
+  pointer-events:none;
 }
-.search {
-  background: var(--panel);
-  color: white;
-  border: 1px solid var(--line);
-  border-radius: 30px;
-  padding: 12px 17px;
-  width: min(260px, 100%);
-  outline: none;
+.hero-inner{position:relative}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:.55rem;
+  font-size:.7rem;
+  font-weight:600;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:1.4rem;
 }
-.search:focus { border-color: var(--accent); }
-.gallery {
-  columns: 4;
-  column-gap: 18px;
+.eyebrow::before{
+  content:"";
+  width:6px;height:6px;
+  border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 0 4px var(--accent-soft);
 }
-.art-card {
-  display: inline-block;
-  width: 100%;
-  margin: 0 0 18px;
-  break-inside: avoid;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 13px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform .25s, border-color .25s;
+
+.hero h1{
+  font-family:var(--font-display);
+  font-size:clamp(2.6rem,6.6vw,4.7rem);
+  line-height:1.04;
+  letter-spacing:-.03em;
+  font-weight:500;
+  margin:0 auto;
+  max-width:16ch;
 }
-.art-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(185,154,255,.6);
+.hero h1 em{
+  font-style:italic;
+  color:var(--accent);
+  position:relative;
+  white-space:nowrap;
 }
-.art-card img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+
+.hero-sub{
+  max-width:58ch;
+  margin:1.5rem auto 0;
+  color:var(--muted);
+  font-size:clamp(.98rem,1.6vw,1.09rem);
+  line-height:1.72;
 }
-.art-placeholder {
-  min-height: 210px;
-  display: grid;
-  place-items: center;
-  padding: 25px;
-  text-align: center;
-  color: var(--muted);
-  background: linear-gradient(135deg,#282331,#17171d);
+
+.hero-actions{
+  margin-top:2.4rem;
+  display:flex;
+  flex-wrap:wrap;
+  gap:.8rem;
+  justify-content:center;
 }
-.art-placeholder span {
-  display: block;
-  font-size: 12px;
-  margin-top: 10px;
-  color: var(--accent);
+
+.hero-stats{
+  margin-top:3rem;
+  display:flex;
+  flex-wrap:wrap;
+  gap:clamp(1.6rem,5vw,3.6rem);
+  justify-content:center;
+  align-items:center;
 }
-.art-info { padding: 14px; }
-.art-info h3 { font-size: 13px; margin: 0 0 7px; }
-.art-info p {
-  color: var(--muted);
-  font-size: 11px;
-  margin: 0;
+.stat{display:flex;flex-direction:column;align-items:center;gap:.15rem}
+.stat-num{
+  font-family:var(--font-display);
+  font-size:clamp(1.4rem,2.6vw,1.85rem);
+  line-height:1;
+  letter-spacing:-.02em;
 }
-.empty { display: none; color: var(--muted); padding: 40px 0; }
-.about {
-  margin-top: 80px;
-  padding: 45px;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 18px;
+.stat-label{
+  font-size:.66rem;
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  color:var(--muted);
 }
-.about h2 { font-size: 30px; margin-top: 0; }
-.about p {
-  max-width: 750px;
-  color: var(--muted);
-  line-height: 1.9;
+.stat-divider{
+  width:1px;height:26px;
+  background:var(--border);
 }
-footer {
-  border-top: 1px solid var(--line);
-  padding: 30px 5%;
-  color: var(--muted);
-  font-size: 12px;
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:.5rem;
+  padding:.92rem 1.85rem;
+  border-radius:999px;
+  font-size:.92rem;
+  font-weight:600;
+  letter-spacing:.005em;
+  text-decoration:none;
+  border:1px solid transparent;
+  cursor:pointer;
+  transition:transform .3s var(--ease), box-shadow .3s var(--ease), background .25s ease, color .25s ease, border-color .25s ease;
 }
-.footer-inner {
-  max-width: 1500px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  flex-wrap: wrap;
+.btn-primary{
+  background:var(--accent);
+  color:#fff;
+  box-shadow:0 10px 26px rgba(108,99,255,.30);
 }
-.lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 50;
-  background: rgba(0,0,0,.94);
-  padding: 55px 20px 25px;
-  align-items: center;
-  justify-content: center;
+.btn-primary:hover{
+  transform:translateY(-2px);
+  box-shadow:0 16px 36px rgba(108,99,255,.38);
 }
-.lightbox.open { display: flex; }
-.lightbox img {
-  max-width: 95%;
-  max-height: 85vh;
-  width: auto;
-  height: auto;
-  object-fit: contain;
+.btn-primary:active{transform:translateY(0)}
+.btn-ghost{
+  background:#fff;
+  color:var(--text);
+  border-color:var(--border);
+  box-shadow:var(--shadow-sm);
 }
-.close {
-  position: absolute;
-  top: 15px;
-  right: 25px;
-  border: 0;
-  background: none;
-  color: white;
-  font-size: 35px;
-  cursor: pointer;
+.btn-ghost:hover{
+  transform:translateY(-2px);
+  border-color:#dcdcdc;
+  box-shadow:var(--shadow-md);
 }
-@media(max-width:1100px) { .gallery { columns: 3; } }
-@media(max-width:700px) {
-  .gallery { columns: 2; column-gap: 11px; }
-  .art-card { margin-bottom: 11px; border-radius: 9px; }
-  .art-info { padding: 10px; }
-  .hero { padding-top: 60px; }
-  .hero h1 { letter-spacing: -2px; }
-  .nav { padding: 17px 5%; }
-  .nav-links { gap: 12px; font-size: 11px; }
-  .about { padding: 25px; }
+
+/* ============================================================
+   SECTION HEADS
+   ============================================================ */
+section{position:relative}
+.section-head{
+  max-width:660px;
+  margin:0 auto clamp(2rem,4vw,3rem);
+  text-align:center;
 }
-@media(max-width:380px) {
-  .nav-links { gap: 8px; }
-  .logo { font-size: 16px; }
+.section-head h2{
+  font-family:var(--font-display);
+  font-size:clamp(1.85rem,3.9vw,2.85rem);
+  font-weight:500;
+  letter-spacing:-.025em;
+  line-height:1.12;
+}
+.section-head .section-sub{
+  margin-top:1rem;
+  color:var(--muted);
+  font-size:1rem;
+  line-height:1.72;
+}
+
+/* ============================================================
+   PORTFOLIO
+   ============================================================ */
+.portfolio{
+  padding:clamp(20px,4vw,48px) 0 clamp(70px,9vw,120px);
+}
+
+.filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem;
+  justify-content:center;
+  margin-bottom:1.4rem;
+}
+
+.filter{
+  appearance:none;
+  border:1px solid var(--border);
+  background:#fff;
+  color:var(--muted);
+  font-size:.83rem;
+  font-weight:500;
+  padding:.58rem 1.05rem;
+  border-radius:999px;
+  cursor:pointer;
+  white-space:nowrap;
+  transition:background .25s ease, color .25s ease, border-color .25s ease, transform .25s var(--ease), box-shadow .25s ease;
+}
+.filter:hover{
+  color:var(--text);
+  border-color:#dcdcdc;
+  transform:translateY(-1px);
+}
+.filter.is-active{
+  background:var(--text);
+  border-color:var(--text);
+  color:#fff;
+  box-shadow:0 8px 22px rgba(23,23,23,.18);
+}
+.filter:focus-visible,
+.btn:focus-visible,
+.nav-toggle:focus-visible,
+.card-btn:focus-visible,
+.lb-btn:focus-visible,
+.to-top:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:3px;
+}
+
+.result-count{
+  text-align:center;
+  font-size:.8rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:clamp(1.5rem,3vw,2.4rem);
+}
+.result-count strong{color:var(--text);font-weight:600}
+
+/* ---------- Masonry gallery ---------- */
+.gallery{
+  column-count:5;
+  column-gap:18px;
+}
+
+.card{
+  break-inside:avoid;
+  -webkit-column-break-inside:avoid;
+  page-break-inside:avoid;
+  margin:0 0 18px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  transition:transform .38s var(--ease), box-shadow .38s var(--ease), border-color .3s ease;
+  animation:cardIn .55s var(--ease) both;
+}
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 18px 42px rgba(23,23,23,.11);
+  border-color:#e3e3e3;
+}
+
+@keyframes cardIn{
+  from{opacity:0;transform:translateY(14px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.card-btn{
+  display:block;
+  width:100%;
+  padding:0;
+  border:0;
+  background:none;
+  text-align:left;
+  color:inherit;
+  font:inherit;
+  cursor:zoom-in;
+}
+
+.card-media{
+  position:relative;
+  display:block;
+  background:#f3f3f4;
+  overflow:hidden;
+}
+
+.card-media img{
+  width:100%;
+  height:auto;
+  display:block;
+  opacity:0;
+  transition:opacity .55s ease;
+}
+.card-media img.is-loaded{opacity:1}
+
+.card-fallback{display:none}
+.card.has-error .card-media{aspect-ratio:16/9}
+.card.has-error .card-media img{display:none}
+.card.has-error .card-fallback{
+  display:flex;
+  position:absolute;
+  inset:0;
+  align-items:center;
+  justify-content:center;
+  padding:1rem;
+  text-align:center;
+  font-size:.74rem;
+  line-height:1.5;
+  color:var(--muted);
+  background:repeating-linear-gradient(45deg,#f5f5f6,#f5f5f6 10px,#f0f0f1 10px,#f0f0f1 20px);
+}
+
+.card-body{
+  display:flex;
+  flex-direction:column;
+  gap:.1rem;
+  padding:.7rem .8rem .82rem;
+}
+.card-title{
+  display:block;
+  font-size:.8rem;
+  font-weight:600;
+  line-height:1.35;
+  letter-spacing:-.005em;
+  color:var(--text);
+}
+.card-cat{
+  display:block;
+  font-size:.66rem;
+  font-weight:500;
+  text-transform:uppercase;
+  letter-spacing:.13em;
+  color:var(--muted);
+}
+
+/* ---------- Empty state ---------- */
+.gallery-empty{
+  text-align:center;
+  padding:4rem 1rem;
+  color:var(--muted);
+  font-size:.95rem;
+}
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+.about{
+  padding:clamp(60px,8vw,110px) 0;
+  border-top:1px solid var(--border);
+  background:linear-gradient(180deg,#FAFAFA 0%,#F5F5F7 100%);
+}
+.about-grid{
+  display:grid;
+  grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+  gap:clamp(2rem,6vw,5rem);
+  align-items:center;
+}
+.about-grid h2{
+  font-family:var(--font-display);
+  font-size:clamp(1.9rem,4vw,2.9rem);
+  font-weight:500;
+  letter-spacing:-.025em;
+  line-height:1.1;
+}
+.about-grid .about-lead{
+  margin-top:1.4rem;
+  color:#4a4a4a;
+  font-size:1.03rem;
+  line-height:1.8;
+}
+.about-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.45rem;
+  margin-top:1.8rem;
+}
+.tag{
+  font-size:.72rem;
+  font-weight:600;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  color:#4a4a4a;
+  background:#fff;
+  border:1px solid var(--border);
+  padding:.42rem .8rem;
+  border-radius:999px;
+}
+.about-mark{
+  display:grid;
+  place-items:center;
+  aspect-ratio:1/1;
+  border-radius:28px;
+  background:
+    radial-gradient(circle at 30% 25%, rgba(108,99,255,.16), transparent 55%),
+    radial-gradient(circle at 72% 78%, rgba(23,23,23,.06), transparent 55%),
+    #ffffff;
+  border:1px solid var(--border);
+  box-shadow:var(--shadow-sm);
+  position:relative;
+  overflow:hidden;
+}
+.about-mark span{
+  font-family:var(--font-display);
+  font-size:clamp(3.4rem,9vw,6.4rem);
+  letter-spacing:-.05em;
+  color:var(--text);
+  opacity:.9;
+}
+.about-mark::after{
+  content:"";
+  position:absolute;
+  inset:auto -10% -34% -10%;
+  height:52%;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(108,99,255,.18), rgba(108,99,255,0) 70%);
+}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact{
+  padding:clamp(60px,8vw,110px) 0;
+  border-top:1px solid var(--border);
+}
+.contact-panel{
+  position:relative;
+  overflow:hidden;
+  border-radius:26px;
+  background:#171717;
+  color:#fff;
+  padding:clamp(2.2rem,5.5vw,4.4rem);
+  box-shadow:var(--shadow-lg);
+}
+.contact-panel::before{
+  content:"";
+  position:absolute;
+  top:-40%;right:-12%;
+  width:min(620px,90vw);
+  height:min(620px,90vw);
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(108,99,255,.34), rgba(108,99,255,0) 62%);
+  pointer-events:none;
+}
+.contact-head{position:relative;max-width:620px}
+.contact-head .eyebrow{color:rgba(255,255,255,.6)}
+.contact-head .eyebrow::before{background:var(--accent);box-shadow:0 0 0 4px rgba(108,99,255,.22)}
+.contact-head h2{
+  font-family:var(--font-display);
+  font-size:clamp(1.9rem,4.2vw,3rem);
+  font-weight:500;
+  letter-spacing:-.025em;
+  line-height:1.1;
+}
+.contact-head p{
+  margin-top:1rem;
+  color:rgba(255,255,255,.68);
+  font-size:1rem;
+  line-height:1.72;
+}
+
+.contact-grid{
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:.9rem;
+  margin-top:clamp(2rem,4vw,3rem);
+}
+.contact-card{
+  display:flex;
+  flex-direction:column;
+  gap:.3rem;
+  padding:1.15rem 1.2rem;
+  border-radius:16px;
+  background:rgba(255,255,255,.055);
+  border:1px solid rgba(255,255,255,.11);
+  text-decoration:none;
+  color:#fff;
+  transition:background .3s ease, transform .35s var(--ease), border-color .3s ease;
+  min-width:0;
+}
+.contact-card:hover{
+  background:rgba(255,255,255,.10);
+  border-color:rgba(255,255,255,.20);
+  transform:translateY(-3px);
+}
+.contact-label{
+  font-size:.66rem;
+  font-weight:600;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.5);
+}
+.contact-value{
+  font-size:.9rem;
+  font-weight:500;
+  overflow-wrap:anywhere;
+  line-height:1.4;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer{
+  border-top:1px solid var(--border);
+  padding:clamp(2.2rem,4vw,3rem) 0;
+  background:#FAFAFA;
+}
+.footer-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1.5rem;
+  flex-wrap:wrap;
+}
+.footer-brand{display:flex;flex-direction:column;gap:.28rem}
+.footer-brand strong{
+  font-size:.84rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  font-weight:700;
+}
+.footer-brand span,
+.footer-note{
+  font-size:.78rem;
+  color:var(--muted);
+}
+.footer-right{
+  display:flex;
+  align-items:center;
+  gap:1.25rem;
+  flex-wrap:wrap;
+}
+.footer-link{
+  font-size:.8rem;
+  color:var(--muted);
+  text-decoration:none;
+  transition:color .25s ease;
+}
+.footer-link:hover{color:var(--text)}
+
+.to-top{
+  display:inline-flex;
+  align-items:center;
+  gap:.45rem;
+  font-size:.78rem;
+  font-weight:600;
+  color:var(--text);
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:999px;
+  padding:.52rem .95rem;
+  cursor:pointer;
+  transition:transform .3s var(--ease), box-shadow .3s ease, border-color .25s ease;
+}
+.to-top:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm);border-color:#dcdcdc}
+
+/* ============================================================
+   LIGHTBOX
+   ============================================================ */
+.lightbox{
+  position:fixed;
+  inset:0;
+  z-index:120;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:clamp(14px,3.5vw,44px);
+  background:rgba(14,14,17,.93);
+  -webkit-backdrop-filter:blur(8px);
+  backdrop-filter:blur(8px);
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .32s ease, visibility .32s ease;
+}
+.lightbox.is-open{opacity:1;visibility:visible}
+
+.lb-panel{
+  position:relative;
+  width:100%;
+  max-width:1080px;
+  max-height:100%;
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+  transform:scale(.975);
+  transition:transform .35s var(--ease);
+}
+.lightbox.is-open .lb-panel{transform:scale(1)}
+
+.lb-figure{
+  margin:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:0;
+  flex:1 1 auto;
+}
+.lb-img{
+  display:block;
+  width:auto;
+  height:auto;
+  max-width:100%;
+  max-height:min(66vh,720px);
+  border-radius:12px;
+  background:#1b1b1f;
+  box-shadow:0 30px 90px rgba(0,0,0,.55);
+  opacity:0;
+  transition:opacity .35s ease;
+}
+.lb-img.is-loaded{opacity:1}
+.lb-error{
+  display:none;
+  color:rgba(255,255,255,.7);
+  font-size:.9rem;
+  text-align:center;
+  padding:3rem 1rem;
+}
+.lb-figure.has-error .lb-img{display:none}
+.lb-figure.has-error .lb-error{display:block}
+
+.lb-caption{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:1.25rem;
+  flex-wrap:wrap;
+  color:#fff;
+  padding:0 .25rem;
+}
+.lb-meta{min-width:0;flex:1 1 260px}
+.lb-title{
+  font-size:1rem;
+  font-weight:600;
+  letter-spacing:-.01em;
+  margin:0;
+}
+.lb-desc{
+  margin-top:.3rem;
+  font-size:.84rem;
+  line-height:1.6;
+  color:rgba(255,255,255,.62);
+  max-width:70ch;
+}
+
+.lb-controls{
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+}
+.lb-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:42px;height:42px;
+  padding:0;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.22);
+  background:rgba(255,255,255,.08);
+  color:#fff;
+  font-size:1rem;
+  cursor:pointer;
+  transition:background .25s ease, transform .25s var(--ease), border-color .25s ease;
+}
+.lb-btn:hover{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.36);transform:translateY(-1px)}
+.lb-btn:disabled{opacity:.3;cursor:default;transform:none}
+.lb-counter{
+  font-size:.78rem;
+  letter-spacing:.1em;
+  color:rgba(255,255,255,.6);
+  min-width:64px;
+  text-align:center;
+  font-variant-numeric:tabular-nums;
+}
+
+.lb-close{
+  position:absolute;
+  top:-52px;
+  right:0;
+  width:42px;height:42px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.22);
+  background:rgba(255,255,255,.08);
+  color:#fff;
+  font-size:1.2rem;
+  line-height:1;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  transition:background .25s ease, transform .3s var(--ease);
+}
+.lb-close:hover{background:rgba(255,255,255,.2);transform:rotate(90deg)}
+
+/* Side arrows (desktop only) */
+.lb-side{
+  position:fixed;
+  top:50%;
+  transform:translateY(-50%);
+  width:52px;height:52px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.2);
+  background:rgba(255,255,255,.08);
+  color:#fff;
+  font-size:1.1rem;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  transition:background .25s ease, border-color .25s ease, transform .25s var(--ease);
+}
+.lb-side:hover{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.36)}
+.lb-prev{left:clamp(8px,2vw,26px)}
+.lb-next{right:clamp(8px,2vw,26px)}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:1199px){
+  .gallery{column-count:4}
+  .contact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+@media (max-width:991px){
+  .gallery{column-count:3;column-gap:16px}
+  .card{margin-bottom:16px}
+  .about-grid{grid-template-columns:1fr;gap:2.5rem}
+  .about-mark{max-width:340px;width:100%;margin:0 auto;order:-1}
+  .lb-side{display:none}
+}
+
+@media (max-width:820px){
+  .nav-toggle{display:inline-flex}
+  .nav{
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    display:none;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    padding:.4rem clamp(16px,4vw,40px) 1.1rem;
+    background:#fff;
+    border-bottom:1px solid var(--border);
+    box-shadow:0 22px 40px rgba(23,23,23,.10);
+  }
+  .site-header.nav-open .nav{display:flex}
+  .nav-link{
+    padding:.9rem .25rem;
+    font-size:.95rem;
+    border-bottom:1px solid var(--border);
+    border-radius:0;
+  }
+  .nav-link:last-child{border-bottom:0}
+  .nav-link::after{display:none}
+  .nav-link.is-active{color:var(--accent)}
+  .header-inner{position:relative}
+}
+
+@media (max-width:767px){
+  .hero h1{max-width:20ch}
+  .stat-divider{display:none}
+  .hero-stats{gap:1.4rem 2.2rem}
+  .lb-img{max-height:56vh}
+  .lb-close{top:-46px}
+  .lb-caption{align-items:flex-start}
+  .lb-controls{width:100%;justify-content:space-between}
+}
+
+@media (max-width:599px){
+  .gallery{column-count:2;column-gap:12px}
+  .card{margin-bottom:12px;border-radius:12px}
+  .card-body{padding:.58rem .62rem .68rem}
+  .card-title{font-size:.74rem}
+  .card-cat{font-size:.6rem;letter-spacing:.1em}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-inner{flex-direction:column;align-items:flex-start;gap:1.1rem}
+  .lb-img{max-height:50vh;border-radius:10px}
+  .hero-actions .btn{width:100%}
+  .hero-actions{max-width:340px;margin-inline:auto}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{
+    animation-duration:.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;
+  }
 }
 </style>
 </head>
 
-<body>
-<header>
-  <nav class="nav">
-    <a class="logo" href="#">ALNUR <span>ARAF</span></a>
-    <div class="nav-links">
-      <a href="#portfolio">Portfolio</a>
-      <a href="#about">About</a>
-      <a href="mailto:info@alnuraraf.eu.org">Contact</a>
-    </div>
-  </nav>
+<body id="top">
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#top" class="wordmark" aria-label="Alnur Araf — back to top">
+      <span class="wordmark-mark" aria-hidden="true">AA</span>
+      <span class="wordmark-text">Alnur Araf</span>
+    </a>
+
+    <nav class="nav" id="primaryNav" aria-label="Primary navigation">
+      <a class="nav-link is-active" href="#top" data-nav="top">Home</a>
+      <a class="nav-link" href="#portfolio" data-nav="portfolio">Portfolio</a>
+      <a class="nav-link" href="#about" data-nav="about">About</a>
+      <a class="nav-link" href="#contact" data-nav="contact">Contact</a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="primaryNav" aria-label="Open navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </header>
 
-<section class="hero">
-  <div class="eyebrow">Independent Digital Artist & Designer</div>
-  <h1>Ideas into <span>visual</span> experiences.</h1>
-  <p>
-    Welcome to my creative portfolio. Explore a collection of digital
-    illustrations, watercolor artwork, clipart, patterns, vectors and
-    visual design resources.
-  </p>
-  <div class="hero-bottom">
-    <span class="pill">50 Creative Works</span>
-    <span class="pill">Digital Art & Design</span>
-    <span class="pill">ALNUR ARAF</span>
-  </div>
-</section>
+<main>
 
-<main id="portfolio">
-  <div class="section-heading">
-    <div>
-      <div class="eyebrow">Selected works</div>
-      <h2>Creative Portfolio</h2>
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="container hero-inner">
+      <p class="eyebrow">Creative Designer &middot; Digital Assets</p>
+      <h1 id="heroTitle">Creative Designs<br>That <em>Inspire.</em></h1>
+      <p class="hero-sub">
+        Explore a curated collection of professional illustrations, digital assets,
+        patterns, textures, and creative resources.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#portfolio">Explore Portfolio</a>
+        <a class="btn btn-ghost" href="#contact">Get in Touch</a>
+      </div>
+
+      <div class="hero-stats" aria-hidden="true">
+        <div class="stat">
+          <span class="stat-num" id="statDesigns">50</span>
+          <span class="stat-label">Designs</span>
+        </div>
+        <span class="stat-divider"></span>
+        <div class="stat">
+          <span class="stat-num" id="statCategories">13</span>
+          <span class="stat-label">Categories</span>
+        </div>
+        <span class="stat-divider"></span>
+        <div class="stat">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Original</span>
+        </div>
+      </div>
     </div>
-    <p id="count">50 artworks</p>
-  </div>
-
-  <div class="toolbar">
-    <div class="filters" id="filters">
-      <button class="filter active" data-filter="all">All Works</button>
-      <button class="filter" data-filter="illustration">Illustration</button>
-      <button class="filter" data-filter="clipart">Clipart</button>
-      <button class="filter" data-filter="vector">Vector & Icons</button>
-      <button class="filter" data-filter="pattern">Patterns</button>
-      <button class="filter" data-filter="design">Design Assets</button>
-    </div>
-    <input class="search" id="search" type="search" placeholder="Search artworks...">
-  </div>
-
-  <div class="gallery" id="gallery"></div>
-  <div class="empty" id="empty">No matching artworks found.</div>
-
-  <section class="about" id="about">
-    <div class="eyebrow">A little about me</div>
-    <h2>Creativity with purpose.</h2>
-    <p>
-      I am ALNUR ARAF, an independent digital creator focused on producing
-      visual artwork and useful creative design assets. This portfolio
-      showcases selected projects across illustration, digital art,
-      clipart, patterns and graphic design.
-    </p>
-    <p>For inquiries and collaborations: info@alnuraraf.eu.org</p>
   </section>
+
+  <!-- ============================================================
+       PORTFOLIO
+       ============================================================ -->
+  <section class="portfolio" id="portfolio" aria-labelledby="portfolioTitle">
+    <div class="container">
+
+      <div class="section-head">
+        <p class="eyebrow">Selected Work</p>
+        <h2 id="portfolioTitle">My Creative Portfolio</h2>
+        <p class="section-sub">
+          Discover a collection of creative work across illustration, digital design,
+          patterns, clipart, and visual resources.
+        </p>
+      </div>
+
+      <div class="filters" id="filterBar" role="group" aria-label="Filter portfolio by category"></div>
+
+      <p class="result-count" id="resultCount" aria-live="polite">Showing <strong>50</strong> of 50 designs</p>
+
+      <div class="gallery" id="gallery"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT
+       ============================================================ -->
+  <section class="about" id="about" aria-labelledby="aboutTitle">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-mark" aria-hidden="true"><span>AA</span></div>
+
+        <div>
+          <p class="eyebrow">The Designer</p>
+          <h2 id="aboutTitle">About Alnur Araf</h2>
+          <p class="about-lead">
+            I'm a creative designer focused on developing visually engaging digital assets,
+            illustrations, patterns, and design resources. My goal is to create useful,
+            original, and aesthetically pleasing designs for creative professionals and businesses.
+          </p>
+
+          <div class="about-tags" aria-label="Areas of practice">
+            <span class="tag">Illustration</span>
+            <span class="tag">Pattern Design</span>
+            <span class="tag">Clipart</span>
+            <span class="tag">Textures</span>
+            <span class="tag">Icon Systems</span>
+            <span class="tag">Stationery</span>
+            <span class="tag">UI Assets</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT
+       ============================================================ -->
+  <section class="contact" id="contact" aria-labelledby="contactTitle">
+    <div class="container">
+      <div class="contact-panel">
+        <div class="contact-head">
+          <p class="eyebrow">Get in Touch</p>
+          <h2 id="contactTitle">Let's Create Something Amazing</h2>
+          <p>
+            Have a project, a collaboration, or a licensing question in mind?
+            I'd love to hear from you — reach out through any of the channels below.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <a class="contact-card" href="https://www.alnuraraf.eu.org" target="_blank" rel="noopener noreferrer">
+            <span class="contact-label">Website</span>
+            <span class="contact-value">www.alnuraraf.eu.org</span>
+          </a>
+
+          <a class="contact-card" href="mailto:info@alnuraraf.eu.org">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">info@alnuraraf.eu.org</span>
+          </a>
+
+          <a class="contact-card" href="https://www.linkedin.com/in/alnuraraf/" target="_blank" rel="noopener noreferrer">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">linkedin.com/in/alnuraraf</span>
+          </a>
+
+          <a class="contact-card" href="https://www.youtube.com/@alnuraraf" target="_blank" rel="noopener noreferrer">
+            <span class="contact-label">YouTube</span>
+            <span class="contact-value">youtube.com/@alnuraraf</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
-<footer>
-  <div class="footer-inner">
-    <span>© <span id="year"></span> ALNUR ARAF. All rights reserved.</span>
-    <span>Independent Digital Artist & Designer</span>
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <strong>Alnur Araf</strong>
+      <span>&copy; <span id="year">2025</span> Alnur Araf. All rights reserved.</span>
+      <span class="footer-note">Designed with creativity.</span>
+    </div>
+
+    <div class="footer-right">
+      <a class="footer-link" href="https://www.alnuraraf.eu.org" target="_blank" rel="noopener noreferrer">Website</a>
+      <a class="footer-link" href="mailto:info@alnuraraf.eu.org">Email</a>
+      <a class="footer-link" href="https://www.linkedin.com/in/alnuraraf/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a class="footer-link" href="https://www.youtube.com/@alnuraraf" target="_blank" rel="noopener noreferrer">YouTube</a>
+
+      <button class="to-top" id="toTop" type="button" aria-label="Back to top">
+        <span aria-hidden="true">&uarr;</span> Back to top
+      </button>
+    </div>
   </div>
 </footer>
 
-<div class="lightbox" id="lightbox" aria-label="Artwork preview">
-  <button class="close" id="close" aria-label="Close preview">&times;</button>
-  <img id="lightboxImage" src="" alt="Artwork preview">
+<!-- ============================================================
+     LIGHTBOX
+     ============================================================ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Portfolio image viewer">
+  <button class="lb-side lb-prev" type="button" data-lb-prev aria-label="Previous image">&#8592;</button>
+  <button class="lb-side lb-next" type="button" data-lb-next aria-label="Next image">&#8594;</button>
+
+  <div class="lb-panel" id="lbPanel">
+    <button class="lb-close" id="lbClose" type="button" aria-label="Close image viewer">&times;</button>
+
+    <figure class="lb-figure" id="lbFigure">
+      <img class="lb-img" id="lbImg" src="" alt="" decoding="async">
+      <p class="lb-error" id="lbError">This image could not be loaded. Please try again later.</p>
+    </figure>
+
+    <div class="lb-caption">
+      <div class="lb-meta">
+        <h3 class="lb-title" id="lbTitle"></h3>
+        <p class="lb-desc" id="lbDesc"></p>
+      </div>
+
+      <div class="lb-controls">
+        <button class="lb-btn" type="button" data-lb-prev aria-label="Previous image">&#8592;</button>
+        <span class="lb-counter" id="lbCounter" aria-live="polite">1 / 50</span>
+        <button class="lb-btn" type="button" data-lb-next aria-label="Next image">&#8594;</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script>
-const artworks = [
-  // Existing collection: 20 artworks
-  ["Autumn Woodland Fox","illustration"],
-  ["Magical Mushroom Cottage","illustration"],
-  ["Strawberry Capybara","illustration"],
-  ["Enchanted Garden Butterfly","illustration"],
-  ["Botanical Elements Icon Set","vector"],
-  ["Coffee Shop Essentials","clipart"],
-  ["Abstract Geometric Shapes","design"],
-  ["Gardening Tools Icon Set","vector"],
-  ["Swan Lake Botanical Dreams","illustration"],
-  ["Secret Cottage Garden","illustration"],
-  ["Tropical Birds Paradise","illustration"],
-  ["Celestial Botanical Dreams","illustration"],
-  ["Cozy Greenhouse Retreat","illustration"],
-  ["Fantasy Dragon Garden","illustration"],
-  ["Cozy Bookshop Corner","illustration"],
-  ["Underwater Fantasy World","illustration"],
-  ["Vintage Wildflower Pattern","pattern"],
-  ["Kawaii Autumn Pattern","pattern"],
-  ["Modern Terracotta Geometry","pattern"],
-  ["Botanical Weekly Planner","design"],
+(function () {
+  "use strict";
 
-  // New collection: 30 artworks
-  ["Premium Minimalist Business Icon","vector"],
-  ["Premium Finance and Accounting","vector"],
-  ["Modern Social Media Content","design"],
-  ["Premium Abstract 3D Glass","design"],
-  ["Modern Architectural Line Art","illustration"],
-  ["Premium Botanical Watercolor Clipart","clipart"],
-  ["Luxury Wedding Floral Frame","design"],
-  ["Japanese-Inspired Minimalist Landscape Art","illustration"],
-  ["Premium Kitchen and Cooking","clipart"],
-  ["Modern Travel Icon Collection","vector"],
-  ["Premium Baby Animal Watercolor","clipart"],
-  ["Modern Christmas Botanical Clipart","clipart"],
-  ["Premium Seamless Terrazzo Pattern","pattern"],
-  ["Vintage Mediterranean Tile Patterns","pattern"],
-  ["Premium Abstract Organic Shapes","design"],
-  ["Luxury Gold Foil Decorative","design"],
-  ["Professional Business Presentation Elements","design"],
-  ["Modern Website UI Component","design"],
-  ["Premium Hand-Drawn Flower Doodles","clipart"],
-  ["Elegant Vintage Ornament Collection","design"],
-  ["Premium Pet Portrait Illustrations","illustration"],
-  ["Modern Abstract Wall Art","illustration"],
-  ["Premium Coffee and Café","clipart"],
-  ["Modern Gardening and Plant","clipart"],
-  ["Luxury Abstract Marble Texture","pattern"],
-  ["Premium Fantasy Mushroom Clipart","clipart"],
-  ["Modern Fitness and Wellness","design"],
-  ["Premium Autumn Leaves Seamless","pattern"],
-  ["Elegant Floral Wedding Stationery","design"],
-  ["Premium Creative Designer Toolkit","design"]
-];
+  /* ==========================================================
+     PORTFOLIO DATA — SINGLE SOURCE OF TRUTH (50 ITEMS)
+     ========================================================== */
+  const portfolioItems = [
 
-/*
-  ADD YOUR IMAGE URLS BELOW.
+    /* ==========================================
+       OLD COLLECTION — 20 IMAGES
+       ========================================== */
 
-  Keep the order identical to the artwork list above.
-  Example:
-  const imageUrls = [
-    "https://example.com/artwork-01.jpg",
-    "https://example.com/artwork-02.jpg"
+    {
+      title: "Autumn Woodland Fox",
+      category: "Illustrations",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhjYkqzXPExD6PecQ98LqBhib-YL93Kpobj7nIux-Tjxzi_PQp1GX1qakvt0vUMjhhskGhCXg41xZ_TgPVzxv5LkYuUruVdH4Pcy0TAMrScntyAWPsKy8fBdKUYHpvS60n3vhlkt1CAlY6HxZYyikFgdF2sHVhI3R0otMGe5VJfdVwdNDiI847sdJ3LZFIf/s1600/01._AUTUMN_WOODLAND_FOX_d7fc4b39.jpg"
+    },
+    {
+      title: "Magical Mushroom Cottage",
+      category: "Illustrations",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjWUnDblUF6UPYFZEzqmHSusCdJWuCpKXuvijtmCH5SUbin6rVZ5WYUyt-Yp_YExt9Su4xCeNuXvax0NyE-dPVmEN8BqctNrNmnChJ1-24iq_plEzsrEAjpjyRw3PpfCjUFeQBee3G9dgU8LlH9_HNxCfiGea-CtbP5i1jdWhgaZ31UUhkh3YfQLJ_jOrxv/s1600/02._MAGICAL_MUSHROOM_COTTAGE_57c3f79b.jpg"
+    },
+    {
+      title: "Strawberry Capybara",
+      category: "Illustrations",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiAC7_JyRcNBuBzVdMen8EV_JgFUMmVkx6eqNufrbrSZm1FAN-B7V_-Qla6bJJgqBjIgXN5ehYfsOfU1grRy9TRug1HLcBiXNDD1CXAtZALVpMjGGMLXMZ2m79g3B9wOcVVkBlwcz9mICQHL9MbUFgruKyMCWZAO_8b3yt16rehXVSB8rJJSt1h-zrHnOY/s1600/03._STRAWBERRY_CAPYBARA_92357dde.jpg"
+    },
+    {
+      title: "Enchanted Garden Butterfly",
+      category: "Nature",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiWqPVHa6qIn7FeYRUvTnBTHswS65JmKgbfyjr4ZjGKzRLN3Fnq02Jv_8s372W9Nf8m3rVGLKCKWC4Ps4438WPjgvAol9QqsnYCGWU_rLBRfvimDCy91lKOtE3ojmteYHlkeb-qvfxjkZK4yAUL8viz0pJOMs0S5TNzRWtuRrCTeXdiqBW4F5bHVeEkFjDj/s1600/04._ENCHANTED_GARDEN_BUTTERFLY_1ace7c7f.jpg"
+    },
+    {
+      title: "Botanical Elements Icon Set",
+      category: "Icons",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg7xhQ36ybYI202AK49B2Ga7CuW-AHqy264a1pXRHhW6U4EVYEllX2JvjtuH0wNPuPCb0NBNslDQbucVJjLll2GtBCleTbKBUJ7cJt-gai33g1pQR6FuVI_6kAVl2IM2pYgdsqRO-8dlVGi2W2z3dUFURVgarvNULbSRpwwzn5tP9Fu7YZ_NlcQwDYuzTc4/s1600/05._BOTANICAL_ELEMENTS_ICON_SET_da0036c4.jpg"
+    },
+    {
+      title: "Coffee Shop Essentials",
+      category: "Lifestyle",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjbKijUGjrEqf6upG5JSVcXhvmmjP7rF1iGBga5bwzHXteypMKOXMhqCaKs4VofJcClUxnOudWPuUEwcMv6fSwuFHUnmYDZiEoXCCE9CLNGnQfDrBtTp31wa9WU9WrrQYrdFhfsbGb0oePH6os8BtNlnVxhtlkLUh2Txk-GHDNw-Fdj5C0JXistmg8zu98_/s1600/06._COFFEE_SHOP_ESSENTIALS_b361b84b.jpg"
+    },
+    {
+      title: "Abstract Geometric Shapes",
+      category: "Abstract",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgwnTDqcP5_1MJANtsJgnb5o4C8euMACdWo7_iWBp7Rc4TtBKhCu3k5iGPMjpwmyk-sD6hOAqq8WAIbpahcZpLqbP-T6KMXLOTqVb6gd1Jt3qJeJVXIOWa1ktFDGSlgfzbMaS35OzObDMv2royChDDiTwqP5xvH9YiCZR2Kn8jcFCI_xP1fwZ8Z-4DaVAee/s1600/07._ABSTRACT_GEOMETRIC_SHAPES_53de840f.jpg"
+    },
+    {
+      title: "Gardening Tools Icon Set",
+      category: "Icons",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjRHYP6M5d9nlHqN6juJsz0jnBJceR_OLDZlQ3EkukJFHOFm-iRiGwEhvtrw_YRQaajg8rap-joukDSm8p67MctvYbo-eKDxl8lgkCp77gj9HNifT6istdTrH2mWu63XPH_uoc6tY90O6DYB0ue6Hw0m9ujfMNGUfvx2_F-VaWJkY9BNxKZ-sl6GzLlydTo/s1600/08._GARDENING_TOOLS_ICON_SET_5b9a93ae.jpg"
+    },
+    {
+      title: "Swan Lake Botanical Dreams",
+      category: "Nature",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLAOGIDq10aASnxQcKcfAOKEMrFIb9amz9ppLoQ6Hdk8YPqA8V5Ee0mrv3LuiAFvPSZaG1EqjHmOY5aeeOESF4uNWWPTJJaSHi6omQ0qh_Bh2li_CUHhiX5CLhNCGCMdxriH2ZlCh8ZuRVxXJNr4Vyf2ZQqmzAfsINK3BbGHPfwTAnm6gkfjYN007GTLT6/s1600/09._SWAN_LAKE_BOTANICAL_DREAMS_cb92ff07.jpg"
+    },
+    {
+      title: "Secret Cottage Garden",
+      category: "Nature",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEinF4jPuyE5tJvy18KRicoZHUg0DhWbKvse7yeTw2Cl_WQq84SfBRZfzFXCu7krg2X6lrOh4jI2BUioNbfbgl824woysQTVH-NO8WGaVDYHKkNlxm5ujjarGJSAAhGsnTYYeLD6fbCaKoUL8hhf-rkZ7XxZXXTtOpuevHqi6q9q2W4IPk_RH9KW-TiDh4lB/s1600/10._SECRET_COTTAGE_GARDEN_8bc04c7b.jpg"
+    },
+    {
+      title: "Tropical Birds Paradise",
+      category: "Nature",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhpX8ATDl0rbtZkC7awT1vBnBM4nKWwWM7tiT2PWqX5H6nxsPXS2w_YxeaFC6K2uClHqSGRfz0YZLvcTredQhHQBoHymI7gBdOA7YeoWa4E0ZxRd0b73c067TtuATdlZ9Mc53UKTxkOs_X2jxVQUZhEO7Wfsxr4O5A4wkcV0RSXRedwSZSjN7mrAF0donIs/s1600/11._TROPICAL_BIRDS_PARADISE_af15fb5e.jpg"
+    },
+    {
+      title: "Celestial Botanical Dreams",
+      category: "Nature",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNRSkI84lf2gXJQoHdotYToBAdNOp1AniHJTUErGgrffrxT2nE55zHiTqC1RWBtIimwVcOsSiJ5hYw9QoufU94JXwh2UVk4ICIvo4-TjimcpXCx4lh1pLVatWkwy_1_hGMH5zcYDNn25O1VpHty6xvcjYKpGaJuFo_DeUgUR8ftein7g5uRWvAFQlDIz8K/s1600/12._CELESTIAL_BOTANICAL_DREAMS_eb4afb6f.jpg"
+    },
+    {
+      title: "Cozy Greenhouse Retreat",
+      category: "Nature",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFreUvx6OUb1IBprX3PBYBCY-ZiKF5V2d-TpQeNb_u8uGC9Vp3LwHVyl4QI3UJu6Lq3boRDBoWMn4Q_JJ0iyGu8eCwPGn9t0Pzl7D7jaYT095iFYh2UE1S7RU0lajdwDuafMfghDTb39rGjgG4PE5X9viW7tF_ZknXh0MG36XzPMOVJUdJvpmSQiO72JrK/s1600/13._COZY_GREENHOUSE_RETREAT_8c865fca.jpg"
+    },
+    {
+      title: "Fantasy Dragon Garden",
+      category: "Illustrations",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhClPxIT8Dq1BghoGjOP9Ot51xUITF9vZ61u1skZViz83JjPRfkrLM-bSPMxtbe6lvAQQw4nKRHunR51rBTP0I4h9cOFTXTC58q9OeuchI2fSRDiLpwGeDUVmobwZ26IcyWK-YzLHePcpP-EBJ7l965T2isKHGqTWqjz1_2ujPuzvNxy55XLGTJ017hFkBF/s1600/14._FANTASY_DRAGON_GARDEN_1157fb6e.jpg"
+    },
+    {
+      title: "Cozy Bookshop Corner",
+      category: "Lifestyle",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgCWTFRbccNCw2VhB2dXRNae0ZrLQiyRCl2LDLKMCJfd2Bk805ix8p_LxMHI0xWrZ-_I_e-5R0rLJogmz2VWLk_jBc-mZ9N3EOzEagBgyCsFEaFJEBuxLk4zkGrXhScvB_pdYekZRkexBg47IX8MflNDut54EkBJPYi5bf2tKRoLDEmqNERvdrK1lRK-N7/s1600/15._COZY_BOOKSHOP_CORNER_7fee309c.jpg"
+    },
+    {
+      title: "Underwater Fantasy World",
+      category: "Illustrations",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhOEWeCl0cuNKcAHJMgcJ086rzPBArg_7jbCKXW_d7dVWrHCGGyAR3YhtTBY1IHCADfG-hRA3fsNJMG3rwfJSNtPKHreYOVb_Yw93r173ZFi6xI7OWLIUwjbzYGW0X_CZDFd3jnfkl7NBs20I7RSIX9Cenbg1i0gpxqlemx0MvwfySCjcVFdVarrdl4WaSN/s1600/16._UNDERWATER_FANTASY_WORLD_66dc5ca3.jpg"
+    },
+    {
+      title: "Vintage Wildflower Pattern",
+      category: "Patterns",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgN28PoDP6rreS9DghQziNoNHAljcvojlL0LTpvV4brPhsqM_BnFf01lql6sWj59N_0UTNWQsOFUMAK1utyJe9Tid0Un4fuo_bo2mtcWQ1zKwdLqVaop5H_-bbi6HxyYwR4tTmm2KYBPq-3YPzPaqA7EIGSL4obmtrJRFX_n6U3kZWwN-7UXLEBh6jtuWOM/s1600/17._VINTAGE_WILDFLOWER_PATTERN_4281680f.jpg"
+    },
+    {
+      title: "Kawaii Autumn Pattern",
+      category: "Patterns",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi97opjCqYrUB3OVv5TghMOLAzwoPEfcUVYppxQigOq1zqUpkQ6y6i1GTAgJNKTVwYii67bCXUxP2JH9XMkF2VMaDca_EAgA3_c3UUjNbZd0OwJWartcHqPv0CSKz5WtB2nFi8y-QIDckqFSBtpnvCDPudqCO9RKTEp02Q6J7-EbcP7EqJaaAWuNoV3QbP5/s1600/18._KAWAII_AUTUMN_PATTERN_7a54dfdc.jpg"
+    },
+    {
+      title: "Modern Terracotta Geometry",
+      category: "Patterns",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhD0RnIOnv6lBqmbJqXMuBKnO_sCYTwC-wzawxQfBgZtO8SbTAtexUIACj-nPnJvR8QHkpGi3xzcBiHS0E-z-MJJFwEEse9BrjAOaq-n93y2WhmWCnxq6McmQrt5XzLdylQ8d0rgDrwmVPHIhAkmMPZX15Kr31GglaaCW7ItZUp2fYYP3MeyXQPLXPhP274/s1600/19._MODERN_TERRACOTTA_GEOMETRY_11a05d40.jpg"
+    },
+    {
+      title: "Botanical Weekly Planner",
+      category: "Stationery",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWbel3SwPe9Vn5g-szFnq_URhxP9XCOgWDmRFd6v9uT3kJsSejflukiwY5dB-J5n5u04FCo-Dp6EsPABVcJgEy4AeW9FHSnNRw-WptnUWtWE1jKpKJmSoDOqni1S-kNfJjAONAvtvWrh_3Ce21wv_-uhxquGWXKHhIBCXSgsvQyTM6U7Qshwjpab_Xgv5y/s1600/20._BOTANICAL_WEEKLY_PLANNER_c960063a.jpg"
+    },
+
+    /* ==========================================
+       NEW COLLECTION — 30 IMAGES
+       ========================================== */
+
+    {
+      title: "Premium Minimalist Business Icon",
+      category: "Business",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKhNy7EZUWkrkfGg9GEvLATBzPT0yO8MpgeC2_0rLpaxD0XC3U81JonyOv0krgSZJHXNLd7oakQMy_LLuFm6vBrjZJHIro_WRlkr66pd-VMEkyhWwa-lEwjxGS_uR8NQ8RSx2FFx2wrEnke5SP40Ent6ZknrU8-2mbhS2DtWuhT9BpbrYoJpBrLiJr9osS/s1600/01._Premium_Minimalist_Business_Icon_0ea0996a.jpg"
+    },
+    {
+      title: "Premium Finance and Accounting",
+      category: "Business",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEVPpusKEmPagymFozR-kpgFGYsBSgYXCNgUDbn536wQtd0c_m39Me2WFSieL4caobyccBHbqjOsKBrb-cEb9tP_oA_5SKURADWZ80JE1c7v2tN8G8QM_kO_M9VhpMoxDIQo3kkjZEtb8J2iGWdanfDVO_NA-R9IvALeP852ZbO6xqpD85za6yPuj2ByeC/s1600/02._Premium_Finance_and_Accounting_2d0a16f4.jpg"
+    },
+    {
+      title: "Modern Social Media Content",
+      category: "Business",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhk3BQgVJSjmMcE65KorM8PcgymkpI7IJ_yO-DGzjEZOg5_nDLE4-XaAbzLK0309H9IiVqXN_iv8axJRB1VDq5gU6XRT6VWSgBURqquCRlq5JmyyoC57Rlw0d6plJwTFmZ7Pj3kLdOWDFT8BH50wtPBv-b2BexkjTH4uhgLg1ITqMvRXVJhi5VCkPorE4PP/s1600/03._Modern_Social_Media_Content_00f94f9c.jpg"
+    },
+    {
+      title: "Premium Abstract 3D Glass",
+      category: "Abstract",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEieVu1RhnFknbWxVZw2HFuHH_UliFVlrZuSFu13s_oeh-BDHeQbYjZijlUsfqla0W4m0O5EGk7Rz1nA7kOYlSdC0YjBsZoh8TvHlHhwkd7fJ_1Uctn6iw6PzunEnW3I8hzuul9V7lNoeeusKXRkui7DpbD7aYOfhXoLuG6v_pQNS4QhOqdf8KRaeM6ZU5UG/s1600/04._Premium_Abstract_3D_Glass_835f4aff.jpg"
+    },
+    {
+      title: "Modern Architectural Line Art",
+      category: "Illustrations",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjphJcac2rY2eRg6jSopjY_0n_FaqqmWG8Svx07UYar89E8epsUhkyUJnkWjobr0z9lA1_kG6Rpdyuk1uBL-9rYVVzcQLYyTUvZlxBU9A96m9gZz32W94k6b7asO8r05x8Zdwh-C0Ujjk6LfT1Hkei_qIcIEf_2wFuayOMHdf3himdBn0zRMmeEa40E3cvp/s1600/05._Modern_Architectural_Line_Art_07828add.jpg"
+    },
+    {
+      title: "Premium Botanical Watercolor Clipart",
+      category: "Clipart",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrvMSAN-7Gkin8GA07vEcNMe6qLh1STFuYw23wLdOu2vaurSygPU_vAUakSGgKC3gJ12TVOgXD6Y7suWWZKlIPLHRiKSs9Q-7O5mSG3kn0JaBFVsRHacFzwY0stnjHGncSw0sMFCop7qmAWdVT9MXPWeIdi6lN7xpBrv9-tNdSx0sMFEobhlG6WIlKmPuq/s1600/06._Premium_Botanical_Watercolor_Clipart_b99e7eae.jpg"
+    },
+    {
+      title: "Luxury Wedding Floral Frame",
+      category: "Floral",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqFkTcmemy15URP4aOIH4_PR2saqha_SwALohihdzLNhIE3YbfQzBZNK5KdpyNxDswbKNyiH0UUepneHcf8arr9-FIDOWRm7uSy6UZRTr7rHATsIiwZM2mtUJM1d742KWO_ONRasxO77paHeBEZ0gTbLz3fXF4pMB4Q2VdIRrOr7gQaHg4p9MYo50JZsL0/s1600/07._Luxury_Wedding_Floral_Frame_bae14b92.jpg"
+    },
+    {
+      title: "Japanese-Inspired Minimalist Landscape Art",
+      category: "Illustrations",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjo4K06Nq_-pQxy7PwwE0AGb0XWMWp-B7g73xNgxM7ONOOqPUHVOrDCjFIqvY4FJ0wzWpFNkQZ2YBrxS1TdlAmkknnOCzDCefQiR1MG-Rv6_Et2XxxVlJnNbiby65cRxBARMtBrOnwYf6nFFVGB0O6sZBVqe2Shxp8Os1hHTnSOnyedpgLDFC6niiYZpMwL/s1600/08._Japanese-Inspired_Minimalist_Landscape_Art_4992c66f.jpg"
+    },
+    {
+      title: "Premium Kitchen and Cooking",
+      category: "Lifestyle",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUyCp1vBskqwfzpBn7qQtDflbDmq6NbT7tPwqNsCUKDtFim6Q70XNl-CtkyFu4Z-TXMnanv1532cdvxKkfRzbgGE4g_Eql0f2Fbh34QmWvmSFhDirda7aW69IF9X2FW75n6wImlh-8aB50pUCJK6mW42WBo3ZMAivI7AovVGinplkqvyaX1myCsdkoznBD/s1600/09._Premium_Kitchen_and_Cooking_0ad70406.jpg"
+    },
+    {
+      title: "Modern Travel Icon Collection",
+      category: "Icons",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiOW6rD6TIk3RJZQdaZGlFHgZHp1lwjHUtcjdvpKFONRjBRpPBV17VrIoFqvvvZzqi7Tb-98xNNaPrO5B9tutMbwYhqhiukbJlVYuMD-wFlZAeyEJVVDTPc-_QDJ2hK8tOO_mNHEVzIkddirYeQSPjuWf8Rlfm9VWwLKoyQQByo7xHfH-hdQ45ZyA2XGp0u/s1600/10._Modern_Travel_Icon_Collection_2de742bd.jpg"
+    },
+    {
+      title: "Premium Baby Animal Watercolor",
+      category: "Illustrations",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFJbaUC_D6edjaK6yC3zmJ4Nc9noTnTCleFfBfrCeqPc-SCHLG80kfWqmn5O1qvs6NW6HonQHiddIzSPw_Ktiyg3c93xirlv4kSiVndCr7wBQCYYQd8CM_qG8K8cZCNJXfJ-G7-YXJtp8msfR7efFDjeiRCNYl-3dQQ_xS2raNybP-ZfJMimu1IG_bKfCy/s1600/11._Premium_Baby_Animal_Watercolor_bcbd56cd.jpg"
+    },
+    {
+      title: "Modern Christmas Botanical Clipart",
+      category: "Clipart",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnzBTYCMqTmqk_2ZpGzSocdqVRHSEw_o9nXIbLGNNMgPd_KKM_-e0o9R1TqKVXv9Du3fLrlOPELsA-te0lGLPFoLzKlveNbIjehd02OA6mcpmldFgrHjOqAh9Bj5_Ifvm6DFo6sF6rFbGKf3ojaPzCvYeedHIi8JhxjCr2cjwfzuhbtTI7acrCgyafXeiI/s1600/12._Modern_Christmas_Botanical_Clipart_21cc16b1.jpg"
+    },
+    {
+      title: "Premium Seamless Terrazzo Pattern",
+      category: "Patterns",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQ3QLWbNGH5ItWxfD0D4Ad8J-XTeudo9NQsy9giDnFsbsWM2AEC56bn78mWrnnnfEMHd5PTwL1c3k1DF78_RaL376-F9mBuuW8YYDNaoQ-04wEFHgqOyD8D8NVaUSDWuid8AnOz7nQ0GsE7VzDcNiHVbeEtCq-eBat9Pn2egmuy0KuBwHb7DfbZUnMOqzO/s1600/13._Premium_Seamless_Terrazzo_Pattern_a162d932.jpg"
+    },
+    {
+      title: "Vintage Mediterranean Tile Patterns",
+      category: "Patterns",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZl8JZbLikKme-ie6473I64vFgaRadzGhVHVPHYX40LtJxjdcWd-1cyQDQoCk-OIHzUkLm9A4oMr7CeZEBJG-iKYal7nrXBzFMFARwlJkUq0cQ8K3-cUVo_ibPE1n7psRkxc2k-DO51jgO5XlaIUPEF-H695LFgnKuJARGz1qQ0PakNWo0Dik6pHhLiSQT/s1600/14._Vintage_Mediterranean_Tile_Patterns_1621a7c0.jpg"
+    },
+    {
+      title: "Premium Abstract Organic Shapes",
+      category: "Abstract",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYgIkcMFYqT4i3Wc5DaLaW1wEHY43W_khziI7FUeSLBXEryLESe-Bmu_6vOONvyNPBDrrP03vnJYr2FTi7zjtGn69HBoKLSBuwZGYQgK1Id78LpZvN2V2eQ0hbXg4z47cVFFeuLgr0Iww02coHikD_nns8a9w1OpNdw1oIqMbRBJYi4nUkHIg-02fijVQ1/s1600/15._Premium_Abstract_Organic_Shapes_04de9373.jpg"
+    },
+    {
+      title: "Luxury Gold Foil Decorative",
+      category: "Textures",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjuALIjKpYMdl9MpvHpdLhqY_tTnOihscuNKDHJNEDWRM2UCidp_mV1q-ZtTQUdIQU5fT-AVSKW9pDBCLDzDoF2WeH1AS4um3oHHVgpMSbpdLh-0a30zWK01dYCr1YHimexI3BR3CfbG9qTllqDVl5uVW0tx1rrMGMG5EdIwoWE0Q8bj8kvh6xp40ULYZ_D/s1600/16._Luxury_Gold_Foil_Decorative_c77ec42b.jpg"
+    },
+    {
+      title: "Professional Business Presentation Elements",
+      category: "Business",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiq-zJndPOklLDz3nn1phJwsj4dqSOL4l1GRXgmVF_smbx7ryTW8Ldt22IN4ePxriJpHlcIvr7rQcpe27Qy1t05SFVOO8hXK-qV4vign3UsLj0zzvigH5Kbo81KWTGWyj6M3CIYjohwHMCBnEaljkm5diK1uMNkRJRKjCZXMwfJs2EUcuMoPooM_5r3Gbk9/s1600/17._Professional_Business_Presentation_Elements_7666d8a8.jpg"
+    },
+    {
+      title: "Modern Website UI Component",
+      category: "UI & Design",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_lEXVQJiqvhkomzi3pVZHWjj2VGjQRdiUTN0htCAJelsvbbReFqIZaR8Gue2jlw7WsO6RZ1g8uZ4JkVS0CQOkgw56AVSmbM9ZXNeAtb1vG25e-BfmDe3DVncB41PQipU2Bz6Xw7GX1aFm6FOPQtlURRkakircP831l5hpYaNDLLx-R2SksS_i6kA57Hmt/s1600/18._Modern_Website_UI_Component_4e704033.jpg"
+    },
+    {
+      title: "Premium Hand-Drawn Flower Doodles",
+      category: "Floral",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhhwvf5v0K5E6hE9unmeiTW9u9OH_hIH1H9ZllNZ3_ghSM1tHx2NEjkZIVUlkMng7jOlOuuPiQATBUnX6sfA_yefKMRqAEom1efnfafpNVTU4M2EfSxB6xD90_P0L3HwzwRORkVc35nJActY1jsVvFudRQupjTugatdswQfc26N0HbWvhZXJGeV8jnRMle7/s1600/19._Premium_Hand-Drawn_Flower_Doodles_2321758f.jpg"
+    },
+    {
+      title: "Elegant Vintage Ornament Collection",
+      category: "Illustrations",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgtkK2XqgKmy124M7EoacZYyCmTETI8E9I0LoFSu5mdlbUyD6gd21ow3XV7yrC3mjpO6XasxkYXsQrC0-4QN0ShiruaRRRqZFSGclOyrJbj9uP-gOSekjXarkcE5RRkTLtebpGfi1QIsC7g1m5uk8vV5GNBN0xgS702b0wIqe2y-bg8chocrSpR1gl2-YuH/s1600/20._Elegant_Vintage_Ornament_Collection_467a8f72.jpg"
+    },
+    {
+      title: "Premium Pet Portrait Illustrations",
+      category: "Illustrations",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9mVwvDleEvNGDpgaOkCfmW8Mska_5vmwOiSJafVFzuhGemWl9i3kll75tX2StWjYSp2zgGh1pVpjyWTPoVvNrZ-ZnyzumW9DH_ITg1yRYuO8qZJ9mfIrMEG95F07T3HNAOapHW5XEnFPddfy0ou9PnCGzcJZ4HwUgVGVKmdrM77JRm1x2vQj4q3vbPWbQ/s1600/21._Premium_Pet_Portrait_Illustrations_06907957.jpg"
+    },
+    {
+      title: "Modern Abstract Wall Art",
+      category: "Abstract",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhC4S3soIN2N9PqD2lWrO9T5RdoihUjEsG3BksPSSaBq_9tUjwElkOrM0Qs74Em734UctuIp4ZYE_r_YIfv6FhOQP1neBrRwen54BXeP01ZUOx-XPbDmeHuxwk-TuAzlhDuqCfWCZWMes-D7mHOPlYUO9yH5ggsUgxtvXZw34iRT3mUdF4sgDznrk43Ix4w/s1600/22._Modern_Abstract_Wall_Art_0cf53356.jpg"
+    },
+    {
+      title: "Premium Coffee and Café",
+      category: "Lifestyle",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzoThcPkWV6KR69Chip25aCT0l_disOW5V8Wy8spH1UvjPmVHksz9CXytKlLUR8G0PigFm4CLZJFk86Xd7exnA63ziRWkPJWD_UtV5WLROBTr_byTZYWFg8errd31bvmCFMELwwbse1zeqtMubGr8o7V7qzF-DmxtS3C0zazKKdTPwBxgy1WldyNo5cpoq/s1600/23._Premium_Coffee_and_Caf%C3%A9_3b1764be.jpg"
+    },
+    {
+      title: "Modern Gardening and Plant",
+      category: "Nature",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhSWpxaHLmBxIIqBvDfDg-5b570_EjeDjUOsT2zmToR5pHbgeSL2v5JOy1nYXGtn0rpLW7i5AkVaXlopGPsifLYCyi_IouZzbtN0P_1AB355jkaD4lIwysvebDCZw0RRj0JJ97sHIof1uGhy0ZhXc8ZubTJOxfcd_GaQPNiOKSnMCcedKFtqVUHFgnFtaPP/s1600/24._Modern_Gardening_and_Plant_870301ac.jpg"
+    },
+    {
+      title: "Luxury Abstract Marble Texture",
+      category: "Textures",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigW99nxD5IQlBS_J9VL4Q_OaSZaLKgoA31ObU45egWhZ5mvOZVaE8XsCOnxdV_QBLp1YDCIa6GObIxY3MENKWqkFjWMvezuuIIwg2Ea42ZcWcYD9K3FHAJUhFipX8Is200a7UPzOFffOL-cofEKjJt_1xX6IQ51xkPH2uq9CfheSGy2BYHpMDW43g9-bWn/s1600/25._Luxury_Abstract_Marble_Texture_40e1f8be.jpg"
+    },
+    {
+      title: "Premium Fantasy Mushroom Clipart",
+      category: "Clipart",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEibcYxdVuAF1cRaAvyRnr1uzV6w0KTUJNRZtc_m-qrnfVU_wyunkpcMtCpHwkrrsV-DWjTkEaJbel020UVMNxX4poqAXmH0gzyb8sZKs7fszghnIAZN-45_OQjYic-UuGGxAaew1S6ihY-oZvKZ1WRM4PzT85dJ1OQBtpXpa5S4mxmvmewNBkIDrIvmcp3q/s1600/26._Premium_Fantasy_Mushroom_Clipart_a8842e9d.jpg"
+    },
+    {
+      title: "Modern Fitness and Wellness",
+      category: "Lifestyle",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjAVaRdSxjKQfPZWZMfW6z6W6siuoNcijcIqQBwgIjPuQiMU_ZtGO8cAJvA5GRPVBxRE-ZbHW8LHvKX_soHkBqqrf7GGNv8Tz-RcLw5h-Aos0GtaBmyKGEKS6zyRMrPMr9ZRhoAcr3U-OOawmHONjQTU3Pg3pARZ0Ei1Cw4q6ro56PdBTIIeViP5FgIp08Q/s1600/27._Modern_Fitness_and_Wellness_81fc9873.jpg"
+    },
+    {
+      title: "Premium Autumn Leaves Seamless",
+      category: "Patterns",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvWUGrzUnafNZe3FqvkAFW4Owf-rNAy9k8QaQeqhyYFycEVExjl_5ekGHzbMufeYIBCc-kKd9qVXnHPRDc-x_xuq9XpYn5itjlW_6V8pzOG91OGCALCwu0QsiT8v919wd91m-i9yE8sdK52YlWKi5G3VUULPwFdsSyzFhew_Dpy3eNR4Uj9TwQR-btiwYQ/s1600/28._Premium_Autumn_Leaves_Seamless_1708c4ee.jpg"
+    },
+    {
+      title: "Elegant Floral Wedding Stationery",
+      category: "Stationery",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5NHb-A8L_phFMmyFaJSLhiDRllS1OwuTn0bKoFnsa-Kjrx6yXXkL3mywDlg7LPoWFzfE-dq-Eotl7xbgo_Z5X3OMn-TSZyEQSbMjfAtCRt9sQCftURWsrP8cEVQxx7CPSRLFUS5Fbw7masMT2hJsr6y2zfKxvX2Mh9dWW98xJ-h7PVKGP2t9NamwV1-tO/s1600/29._Elegant_Floral_Wedding_Stationery_f20198e1.jpg"
+    },
+    {
+      title: "Premium Creative Designer Toolkit",
+      category: "UI & Design",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhkLI9v5Q_zBpGBBLbc8LDOGkJw16g6PGHOlgFTzOU21x6UsjpPim9LjdZyhjar-R81MBodppsObqVFOI-MvXyUjC9kRrqSv4hcpZNnT6aK1bRMEBE2PLcMcABZ3-Sngmj2CQwXT3iUTQ8nckIIeKOkBfP0SqxOSZuiUV2wGXxmFSRjJNaVuytpahSktSAw/s1600/30._Premium_Creative_Designer_Toolkit_4ef6989d.jpg"
+    }
+
   ];
 
-  Leave an empty string for an artwork whose image URL
-  has not yet been added.
-*/
-const imageUrls = Array(50).fill("");
+  /* ==========================================================
+     CONSTANTS & HELPERS
+     ========================================================== */
+  const CATEGORIES = [
+    "All Designs",
+    "Illustrations",
+    "Business",
+    "Icons",
+    "Clipart",
+    "Patterns",
+    "Textures",
+    "Floral",
+    "Nature",
+    "Abstract",
+    "Lifestyle",
+    "Stationery",
+    "UI & Design"
+  ];
 
-const gallery = document.getElementById("gallery");
-const search = document.getElementById("search");
-const count = document.getElementById("count");
-const empty = document.getElementById("empty");
-let activeFilter = "all";
+  const TOTAL = portfolioItems.length;
+  const IMG_W = 1376;
+  const IMG_H = 768;
 
-function render() {
-  const term = search.value.toLowerCase().trim();
-  const filtered = artworks.map((item,index) => ({item,index}))
-    .filter(({item}) => {
-      const matchesFilter = activeFilter === "all" || item[1] === activeFilter;
-      const matchesSearch = item[0].toLowerCase().includes(term);
-      return matchesFilter && matchesSearch;
+  const galleryEl      = document.getElementById('gallery');
+  const filterBarEl    = document.getElementById('filterBar');
+  const resultCountEl  = document.getElementById('resultCount');
+  const headerEl       = document.getElementById('siteHeader');
+  const navToggleEl    = document.getElementById('navToggle');
+  const navLinks       = Array.prototype.slice.call(document.querySelectorAll('.nav-link'));
+  const toTopEl        = document.getElementById('toTop');
+  const yearEl         = document.getElementById('year');
+  const statDesignsEl  = document.getElementById('statDesigns');
+  const statCatsEl     = document.getElementById('statCategories');
+
+  const lightboxEl  = document.getElementById('lightbox');
+  const lbImg       = document.getElementById('lbImg');
+  const lbFigure    = document.getElementById('lbFigure');
+  const lbTitleEl   = document.getElementById('lbTitle');
+  const lbDescEl    = document.getElementById('lbDesc');
+  const lbCounterEl = document.getElementById('lbCounter');
+  const lbCloseEl   = document.getElementById('lbClose');
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  let currentFilter = 'All Designs';
+  let visibleItems  = [];
+  let lbIndex       = 0;
+  let lastFocused   = null;
+
+  function escapeHTML(str) {
+    return String(str).replace(/[&<>"']/g, function (ch) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch];
+    });
+  }
+
+  function buildAlt(item) {
+    return item.title + ' — ' + item.category + ' design by Alnur Araf';
+  }
+
+  function buildDescription(item) {
+    return '"' + item.title + '" — a premium ' + item.category.toLowerCase() +
+      ' design by Alnur Araf, created for creative professionals, brands, and digital projects.';
+  }
+
+  /* ==========================================================
+     STATS
+     ========================================================== */
+  (function initStats() {
+    const uniqueCats = portfolioItems.reduce(function (acc, i) {
+      if (acc.indexOf(i.category) === -1) acc.push(i.category);
+      return acc;
+    }, []);
+    if (statDesignsEl) statDesignsEl.textContent = String(TOTAL);
+    if (statCatsEl) statCatsEl.textContent = String(uniqueCats.length);
+    if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+  })();
+
+  /* ==========================================================
+     FILTER BAR
+     ========================================================== */
+  (function buildFilters() {
+    const frag = document.createDocumentFragment();
+
+    CATEGORIES.forEach(function (cat) {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'filter' + (cat === currentFilter ? ' is-active' : '');
+      btn.dataset.filter = cat;
+      btn.setAttribute('aria-pressed', cat === currentFilter ? 'true' : 'false');
+      btn.textContent = cat;
+      frag.appendChild(btn);
     });
 
-  gallery.innerHTML = "";
-  count.textContent = `${filtered.length} artworks`;
-  empty.style.display = filtered.length ? "none" : "block";
+    filterBarEl.appendChild(frag);
 
-  filtered.forEach(({item,index}) => {
-    const [title,category] = item;
-    const url = imageUrls[index];
-    const card = document.createElement("article");
-    card.className = "art-card";
+    filterBarEl.addEventListener('click', function (event) {
+      const btn = event.target.closest('.filter');
+      if (!btn) return;
+      const next = btn.dataset.filter;
+      if (next === currentFilter) return;
 
-    if (url) {
-      const img = document.createElement("img");
-      img.src = url;
-      img.alt = title;
-      img.loading = "lazy";
-      img.onerror = () => {
-        img.remove();
-        card.insertBefore(makePlaceholder(title), card.firstChild);
-      };
-      card.appendChild(img);
+      currentFilter = next;
+      Array.prototype.forEach.call(filterBarEl.querySelectorAll('.filter'), function (b) {
+        const active = b.dataset.filter === currentFilter;
+        b.classList.toggle('is-active', active);
+        b.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+
+      renderGallery();
+    });
+  })();
+
+  /* ==========================================================
+     GALLERY RENDERING
+     ========================================================== */
+  function updateResultCount() {
+    resultCountEl.innerHTML =
+      'Showing <strong>' + visibleItems.length + '</strong> of ' + TOTAL + ' designs';
+  }
+
+  function bindImageStates(card, img) {
+    function markLoaded() {
+      img.classList.add('is-loaded');
+    }
+    function markError() {
+      card.classList.add('has-error');
+      img.classList.remove('is-loaded');
+    }
+
+    img.addEventListener('load', markLoaded, { once: true });
+    img.addEventListener('error', markError, { once: true });
+
+    // Handle images already cached/complete before listeners attach
+    if (img.complete) {
+      if (img.naturalWidth > 0) {
+        markLoaded();
+      } else {
+        markError();
+      }
+    }
+  }
+
+  function createCard(item, position) {
+    const card = document.createElement('figure');
+    card.className = 'card';
+    card.dataset.index = String(position);
+
+    const alt = escapeHTML(buildAlt(item));
+    const safeTitle = escapeHTML(item.title);
+    const safeCat = escapeHTML(item.category);
+    const safeSrc = escapeHTML(item.image);
+
+    card.innerHTML =
+      '<button class="card-btn" type="button" aria-label="View ' + safeTitle + ' in full size">' +
+        '<span class="card-media">' +
+          '<img src="' + safeSrc + '" alt="' + alt + '" loading="lazy" decoding="async" width="' + IMG_W + '" height="' + IMG_H + '">' +
+          '<span class="card-fallback" aria-hidden="true">Image unavailable</span>' +
+        '</span>' +
+        '<span class="card-body">' +
+          '<span class="card-title">' + safeTitle + '</span>' +
+          '<span class="card-cat">' + safeCat + '</span>' +
+        '</span>' +
+      '</button>';
+
+    if (!reduceMotion) {
+      card.style.animationDelay = Math.min(position * 18, 420) + 'ms';
+      card.addEventListener('animationend', function () {
+        card.style.animation = 'none';
+      }, { once: true });
     } else {
-      card.appendChild(makePlaceholder(title));
+      card.style.animation = 'none';
     }
 
-    const info = document.createElement("div");
-    info.className = "art-info";
-    const heading = document.createElement("h3");
-    heading.textContent = title;
-    const label = document.createElement("p");
-    label.textContent = category.replace("-", " & ");
-    info.append(heading,label);
-    card.appendChild(info);
+    const img = card.querySelector('img');
+    bindImageStates(card, img);
 
-    if (url) {
-      card.addEventListener("click", () => openPreview(url,title));
+    card.querySelector('.card-btn').addEventListener('click', function () {
+      openLightbox(position);
+    });
+
+    return card;
+  }
+
+  function renderGallery() {
+    visibleItems = currentFilter === 'All Designs'
+      ? portfolioItems.slice()
+      : portfolioItems.filter(function (item) { return item.category === currentFilter; });
+
+    const frag = document.createDocumentFragment();
+    visibleItems.forEach(function (item, position) {
+      frag.appendChild(createCard(item, position));
+    });
+
+    galleryEl.innerHTML = '';
+
+    if (visibleItems.length === 0) {
+      const empty = document.createElement('p');
+      empty.className = 'gallery-empty';
+      empty.textContent = 'No designs found in this category yet.';
+      galleryEl.appendChild(empty);
+    } else {
+      galleryEl.appendChild(frag);
     }
-    gallery.appendChild(card);
+
+    updateResultCount();
+  }
+
+  /* ==========================================================
+     LIGHTBOX
+     ========================================================== */
+  function updateLightbox() {
+    const item = visibleItems[lbIndex];
+    if (!item) return;
+
+    lbFigure.classList.remove('has-error');
+    lbImg.classList.remove('is-loaded');
+    lbImg.alt = buildAlt(item);
+    lbImg.src = item.image;
+
+    lbTitleEl.textContent = item.title;
+    lbDescEl.textContent = buildDescription(item);
+    lbCounterEl.textContent = (lbIndex + 1) + ' / ' + visibleItems.length;
+  }
+
+  lbImg.addEventListener('load', function () {
+    lbImg.classList.add('is-loaded');
   });
-}
 
-function makePlaceholder(title) {
-  const placeholder = document.createElement("div");
-  placeholder.className = "art-placeholder";
-  const content = document.createElement("div");
-  content.textContent = title;
-  const note = document.createElement("span");
-  note.textContent = "ADD IMAGE URL";
-  content.appendChild(note);
-  placeholder.appendChild(content);
-  return placeholder;
-}
-
-document.querySelectorAll(".filter").forEach(button => {
-  button.addEventListener("click", () => {
-    document.querySelector(".filter.active").classList.remove("active");
-    button.classList.add("active");
-    activeFilter = button.dataset.filter;
-    render();
+  lbImg.addEventListener('error', function () {
+    lbFigure.classList.add('has-error');
+    lbImg.classList.remove('is-loaded');
   });
-});
 
-search.addEventListener("input",render);
+  function openLightbox(position) {
+    if (!visibleItems.length) return;
 
-const lightbox = document.getElementById("lightbox");
-const lightboxImage = document.getElementById("lightboxImage");
+    lbIndex = Math.max(0, Math.min(position, visibleItems.length - 1));
+    lastFocused = document.activeElement;
 
-function openPreview(url,title) {
-  lightboxImage.src = url;
-  lightboxImage.alt = title;
-  lightbox.classList.add("open");
-}
-function closePreview() {
-  lightbox.classList.remove("open");
-  lightboxImage.src = "";
-}
-document.getElementById("close").addEventListener("click",closePreview);
-lightbox.addEventListener("click",event => {
-  if (event.target === lightbox) closePreview();
-});
-document.addEventListener("keydown",event => {
-  if (event.key === "Escape") closePreview();
-});
+    updateLightbox();
 
-document.getElementById("year").textContent = new Date().getFullYear();
-render();
+    lightboxEl.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    lbCloseEl.focus({ preventScroll: true });
+  }
+
+  function closeLightbox() {
+    lightboxEl.classList.remove('is-open');
+    document.body.style.overflow = '';
+
+    if (lastFocused && typeof lastFocused.focus === 'function') {
+      lastFocused.focus({ preventScroll: true });
+    }
+    lastFocused = null;
+  }
+
+  function showPrev() {
+    if (!visibleItems.length) return;
+    lbIndex = (lbIndex - 1 + visibleItems.length) % visibleItems.length;
+    updateLightbox();
+  }
+
+  function showNext() {
+    if (!visibleItems.length) return;
+    lbIndex = (lbIndex + 1) % visibleItems.length;
+    updateLightbox();
+  }
+
+  lbCloseEl.addEventListener('click', closeLightbox);
+
+  Array.prototype.forEach.call(document.querySelectorAll('[data-lb-prev]'), function (btn) {
+    btn.addEventListener('click', showPrev);
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll('[data-lb-next]'), function (btn) {
+    btn.addEventListener('click', showNext);
+  });
+
+  // Click outside the panel closes the lightbox
+  lightboxEl.addEventListener('click', function (event) {
+    if (event.target === lightboxEl) closeLightbox();
+  });
+
+  // Keyboard controls
+  document.addEventListener('keydown', function (event) {
+    const isOpen = lightboxEl.classList.contains('is-open');
+
+    if (isOpen) {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        closeLightbox();
+      } else if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        showNext();
+      } else if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        showPrev();
+      } else if (event.key === 'Tab') {
+        // Simple focus containment inside the lightbox
+        const focusables = lightboxEl.querySelectorAll('button');
+        if (!focusables.length) return;
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
+      return;
+    }
+
+    // Escape also closes the mobile menu
+    if (event.key === 'Escape' && headerEl.classList.contains('nav-open')) {
+      closeMobileNav();
+    }
+  });
+
+  /* Touch swipe support in the lightbox */
+  (function initSwipe() {
+    let startX = 0;
+    let startY = 0;
+    let tracking = false;
+
+    lightboxEl.addEventListener('touchstart', function (event) {
+      if (event.touches.length !== 1) return;
+      startX = event.touches[0].clientX;
+      startY = event.touches[0].clientY;
+      tracking = true;
+    }, { passive: true });
+
+    lightboxEl.addEventListener('touchend', function (event) {
+      if (!tracking) return;
+      tracking = false;
+      const touch = event.changedTouches[0];
+      if (!touch) return;
+
+      const dx = touch.clientX - startX;
+      const dy = touch.clientY - startY;
+
+      if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy)) {
+        if (dx < 0) showNext(); else showPrev();
+      }
+    }, { passive: true });
+  })();
+
+  /* ==========================================================
+     MOBILE NAVIGATION
+     ========================================================== */
+  function closeMobileNav() {
+    headerEl.classList.remove('nav-open');
+    navToggleEl.setAttribute('aria-expanded', 'false');
+    navToggleEl.setAttribute('aria-label', 'Open navigation menu');
+  }
+
+  navToggleEl.addEventListener('click', function () {
+    const isOpen = headerEl.classList.toggle('nav-open');
+    navToggleEl.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    navToggleEl.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+  });
+
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', closeMobileNav);
+  });
+
+  // Reset mobile nav if the viewport grows past the breakpoint
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 820) closeMobileNav();
+  });
+
+  /* ==========================================================
+     SCROLL BEHAVIOUR — header state, back to top, active nav
+     ========================================================== */
+  function onScroll() {
+    const y = window.pageYOffset || document.documentElement.scrollTop;
+
+    headerEl.classList.toggle('is-scrolled', y > 8);
+
+    if (toTopEl) {
+      toTopEl.style.visibility = y > 600 ? 'visible' : 'hidden';
+      toTopEl.style.opacity = y > 600 ? '1' : '0';
+      toTopEl.style.pointerEvents = y > 600 ? 'auto' : 'none';
+    }
+  }
+
+  if (toTopEl) {
+    toTopEl.style.transition = 'opacity .3s ease, visibility .3s ease, transform .3s ease, box-shadow .3s ease, border-color .25s ease';
+    toTopEl.style.visibility = 'hidden';
+    toTopEl.style.opacity = '0';
+    toTopEl.style.pointerEvents = 'none';
+
+    toTopEl.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Active nav link highlighting
+  (function initScrollSpy() {
+    const sections = [
+      { id: 'top', el: document.body },
+      { id: 'portfolio', el: document.getElementById('portfolio') },
+      { id: 'about', el: document.getElementById('about') },
+      { id: 'contact', el: document.getElementById('contact') }
+    ].filter(function (s) { return !!s.el; });
+
+    if (!('IntersectionObserver' in window)) return;
+
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        const id = entry.target.id;
+        navLinks.forEach(function (link) {
+          link.classList.toggle('is-active', link.dataset.nav === id);
+        });
+      });
+    }, {
+      rootMargin: '-45% 0px -50% 0px',
+      threshold: 0
+    });
+
+    sections.forEach(function (s) { observer.observe(s.el); });
+  })();
+
+  /* ==========================================================
+     INIT
+     ========================================================== */
+  renderGallery();
+
+})();
 </script>
+
 </body>
 </html>
